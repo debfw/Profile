@@ -1,0 +1,56 @@
+{  
+    "name": "CL",
+    "title": "Frontend Developer",
+    "profile": {
+        "description1": "3 years in frontend development collaborating with global cross-functional teams.",
+        "description2": "Contributed $10M in conversion rates with a 25% user engagement boost and full responsive design."
+    },
+    "details": {
+        "base": "Toronto, Canada",
+        "phone": "(+1) 647-583-9485",
+        "email": "clwork1324@gmail.com"
+    },
+    "links": {
+        "linkedin": "LinkedIn"
+    },
+    "technicalStrengths": {
+        "skills": [
+            "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Redux", "Three.js", "jQuery",
+            "SQL", "MongoDB", "AWS", "Microservices",
+            "Webpack", "Gulp", "Git", "Gitlab CICD", "Swagger", "RESTful APIs", "GraphQL", "Jira", "WebSocket",
+            "Figma", "Canvas", "CSS Frameworks and Preprocessors", "Unit Testing libraries",
+            "Agile", "Scrum"
+        ],
+        "tools": [
+            "Material-UI", "Mantine", "Bootstrap", "Tailwind CSS", "Modular CSS", "SCSS (SASS)", "LESS", "CSS-in-JS",
+            "Styled Components", "PostCSS", "Emotion", "Cypress", "Jest", "Karma", "Jasmine"
+        ]
+    },
+    "achievements": [
+        "Refactored and built tests for legacy codebase, achieving a 60% reduction in codebase vulnerabilities.",
+        "Fluent in English, Mandarin, basic Japanese."
+    ],
+    "employmentHistory": {
+        "optoma": {
+            "role": "Frontend Developer at Optoma Technology, Taiwan (Hybrid)",
+            "period": "May 2023 — Present",
+            "achievements": [
+                "Propelled team development efficiency from a 70% to a 100% code delivery rate by building GitLab CI/CD and Jira Agile boards.",
+                "Built a CMS and OAM solutions from scratch, providing full user language coverage impacting on millions of users.",
+                "Refactored the legacy code of a widely sold projector platform, achieving a 60% reduction in codebase vulnerabilities.",
+                "Strategically refactored the Optoma official website by upgrading high-level state management tools."
+            ]
+        },
+        "chiaSheng": {
+            "role": "Frontend Developer at Chia Sheng, Taiwan (Hybrid)",
+            "period": "January 2021 — May 2023",
+            "achievements": [
+                "Led a Scrum development team, responsible for the interface design, development, testing for the ChiaSheng Platform.",
+                "Enhanced user experience with third-party map search services and user registration APIs.",
+                "Proactively utilized third-party map search services and user registration APIs, contributing to a 25% increase in user engagement.",
+                "Refactored a 4-year-old internal platform codebase.",
+                "Built the primary internal management system from scratch."
+            ]
+        }
+    }
+}

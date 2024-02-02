@@ -1,0 +1,61 @@
+{
+    "name": "CL",
+    "title": "Développeur Frontend",
+    "profile": {
+      "description1": "3 ans d'expérience en développement frontend en collaboration avec des équipes interfonctionnelles mondiales.",
+      "description2": "Contribution de 10 millions de dollars dans les taux de conversion avec une augmentation de 25 % de l'engagement des utilisateurs et une conception entièrement réactive."
+    },
+    "details": {
+      "base": "Toronto, Canada",
+      "phone": "(+1) 647-583-9485",
+      "email": "clwork1324@gmail.com"
+    },
+    "links": {
+      "linkedin": "LinkedIn"
+    },
+    "technicalStrengths": {
+      "skills": [
+        "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Redux", "Three.js", "jQuery",
+        "SQL", "MongoDB", "AWS", "Microservices",
+        "Webpack", "Gulp", "Git", "Gitlab CICD", "Swagger", "API REST", "GraphQL", "Jira", "WebSocket",
+        "Figma", "Canvas", "Frameworks et préprocesseurs CSS", "Bibliothèques de tests unitaires",
+        "Agile", "Scrum"
+      ],
+      "tools": [
+        "Material-UI", "Mantine", "Bootstrap", "Tailwind CSS", "CSS modulaire", "SCSS (SASS)", "LESS", "CSS-in-JS",
+        "Composants stylisés", "PostCSS", "Emotion", "Cypress", "Jest", "Karma", "Jasmine"
+      ]
+    },
+    "achievements": [
+      "Refonte et création de tests pour une base de code héritée, atteignant une réduction de 60 % des vulnérabilités de la base de code.",
+      "Couramment en anglais, mandarin, japonais de base."
+    ],
+    "employmentHistory": {
+      "optoma": {
+        "role": "Développeur Frontend chez Optoma Technology, Taiwan (Hybride)",
+        "period": "Mai 2023 — Présent",
+        "achievements": [
+          "Amélioration de l'efficacité du développement de l'équipe de 70 % à 100 % de taux de livraison de code grâce à la construction de GitLab CI/CD et des tableaux Agile de Jira.",
+          "Construction de solutions CMS et OAM de zéro, offrant une couverture linguistique complète aux utilisateurs, impactant des millions d'utilisateurs.",
+          "Refonte du code hérité d'une plateforme de projecteurs largement vendue, atteignant une réduction de 60 % des vulnérabilités de la base de code.",
+          "Refonte stratégique du site officiel d'Optoma en améliorant les outils de gestion d'état de haut niveau."
+        ]
+      },
+      "chiaSheng": {
+        "role": "Développeur Frontend chez Chia Sheng, Taiwan (Hybride)",
+        "period": "Janvier 2021 — Mai 2023",
+        "achievements": [
+          "Direction d'une équipe de développement Scrum, responsable de la conception, du développement et des tests de l'interface pour la plateforme ChiaSheng.",
+          "Amélioration de l'expérience utilisateur avec des services de recherche de cartes tiers et des API d'inscription des utilisateurs.",
+          "Utilisation proactive des services de recherche de cartes tiers et des API d'inscription des utilisateurs, contribuant à une augmentation significative de 25 % de l'engagement des utilisateurs.",
+          "Refonte d'une base de code de plateforme interne vieille de 4 ans.",
+          "Construction du système de gestion interne principal à partir de zéro."
+        ]
+      }
+    },
+    "education": {
+      "degree": "Master, Dong Hwa University, Taiwan",
+      "period": "August 2017 — August 2018"
+    }
+  }
+  
