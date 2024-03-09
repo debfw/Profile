@@ -1,61 +1,55 @@
 {
-    "name": "CL",
-    "title": "Développeur Frontend",
-    "profile": {
-      "description1": "3 ans d'expérience en développement frontend en collaboration avec des équipes interfonctionnelles mondiales.",
-      "description2": "Contribution de 10 millions de dollars dans les taux de conversion avec une augmentation de 25 % de l'engagement des utilisateurs et une conception entièrement réactive."
-    },
-    "details": {
-      "base": "Toronto, Canada",
-      "phone": "(+1) 647-583-9485",
-      "email": "clwork1324@gmail.com"
-    },
-    "links": {
-      "linkedin": "LinkedIn"
-    },
-    "technicalStrengths": {
-      "skills": [
-        "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Redux", "Three.js", "jQuery",
-        "SQL", "MongoDB", "AWS", "Microservices",
-        "Webpack", "Gulp", "Git", "Gitlab CICD", "Swagger", "API REST", "GraphQL", "Jira", "WebSocket",
-        "Figma", "Canvas", "Frameworks et préprocesseurs CSS", "Bibliothèques de tests unitaires",
-        "Agile", "Scrum"
-      ],
-      "tools": [
-        "Material-UI", "Mantine", "Bootstrap", "Tailwind CSS", "CSS modulaire", "SCSS (SASS)", "LESS", "CSS-in-JS",
-        "Composants stylisés", "PostCSS", "Emotion", "Cypress", "Jest", "Karma", "Jasmine"
-      ]
-    },
-    "achievements": [
-      "Refonte et création de tests pour une base de code héritée, atteignant une réduction de 60 % des vulnérabilités de la base de code.",
-      "Couramment en anglais, mandarin, japonais de base."
-    ],
-    "employmentHistory": {
-      "optoma": {
-        "role": "Développeur Frontend chez Optoma Technology, Taiwan (Hybride)",
-        "period": "Mai 2023 — Présent",
-        "achievements": [
-          "Amélioration de l'efficacité du développement de l'équipe de 70 % à 100 % de taux de livraison de code grâce à la construction de GitLab CI/CD et des tableaux Agile de Jira.",
-          "Construction de solutions CMS et OAM de zéro, offrant une couverture linguistique complète aux utilisateurs, impactant des millions d'utilisateurs.",
-          "Refonte du code hérité d'une plateforme de projecteurs largement vendue, atteignant une réduction de 60 % des vulnérabilités de la base de code.",
-          "Refonte stratégique du site officiel d'Optoma en améliorant les outils de gestion d'état de haut niveau."
-        ]
+   
+  "name": "Liko Chien",
+  "title": "Développeur Frontend",
+  "location": "Londres, Royaume-Uni",
+  "contact": "+44 20 8638 5722",
+  "email": "clwork1324@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
+  "résumé": {
+      "experience": "3 ans d'expérience en développement frontend, spécialisé dans l'écosystème React, TypeScript, Next.js et Redux",
+      "focus": "Axé sur l'optimisation des processus, la sécurisation des plateformes et l'amélioration de l'engagement des utilisateurs grâce au développement stratégique et à des solutions innovantes"
+  },
+  "expérience": {
+      "actuel": {
+          "title": "Développeur Frontend Senior",
+          "société": "Optoma Technology, Royaume-Uni (à distance)",
+          "period": "Mai 2023 - Présent",
+          "responsabilités": [
+              "Amélioration de l'efficacité de l'équipe en implémentant des portes de qualité et des linters avancés dans le pipeline GitLab CI/CD",
+              "Développement de solutions CMS et OAM basées sur Next.js avec i18n, impactant des millions de personnes dans le monde",
+              "Mise en œuvre des protections CSP et CSRF pour améliorer la sécurité d'une plate-forme de projecteur de 300 millions de dollars, étendant sa portée à 159 pays",
+              "Réduction de 30 % du bundle et augmentation globale de 30 % des métriques Web Vital via le fractionnement de code, l'optimisation des actifs et Redux",
+              "API Stripe intégrée dans la solution CMS pour les transactions de paiement sécurisées",
+              "Développement de linters et conduite de revues de code pour améliorer la qualité des projets et le respect des standards",
+              "Appris TypeScript pour stabiliser complètement le projet SPA au cours de la première semaine d'intégration",
+              "Amélioration de l'engagement des utilisateurs de 25 % grâce à une interface utilisateur simplifiée, des expériences personnalisées et une conception entièrement réactive"
+          ]
       },
-      "chiaSheng": {
-        "role": "Développeur Frontend chez Chia Sheng, Taiwan (Hybride)",
-        "period": "Janvier 2021 — Mai 2023",
-        "achievements": [
-          "Direction d'une équipe de développement Scrum, responsable de la conception, du développement et des tests de l'interface pour la plateforme ChiaSheng.",
-          "Amélioration de l'expérience utilisateur avec des services de recherche de cartes tiers et des API d'inscription des utilisateurs.",
-          "Utilisation proactive des services de recherche de cartes tiers et des API d'inscription des utilisateurs, contribuant à une augmentation significative de 25 % de l'engagement des utilisateurs.",
-          "Refonte d'une base de code de plateforme interne vieille de 4 ans.",
-          "Construction du système de gestion interne principal à partir de zéro."
-        ]
+      "précédent": {
+          "title": "Développeur Frontend",
+          "société": "Chia Sheng Real Estate, Taiwan (Hybride)",
+          "period": "Janvier 2021 - mai 2023",
+          "responsabilités": [
+              "A dirigé une équipe Scrum et une révision de code, atteignant un taux de livraison de 100 % et une qualité de code améliorée dans les workflows Jira Agile",
+              "Refactorisation de la base de code d'une plateforme vieille de 4 ans à l'aide de Material UI et Tailwind CSS, réalisation d'une conception Web entièrement réactive",
+              "Développement et conception d'un système de gestion interne avec Figma et Bootstrap",
+              "Collaboration avec le backend pour implémenter les validations Zod et React Hook Form, améliorant ainsi l'intégrité des données et l'expérience utilisateur",
+              "Atteint une couverture de code de 85 % grâce à des tests unitaires et d'intégration avec Jest et Cypress",
+              "Déploiement de projet simplifié via AWS Amplify, améliorant l'efficacité opérationnelle et l'évolutivité du projet",
+              "Utilisation d'OAuth2 et JWT pour une authentification robuste et une implémentation WebSocket pour les interactions en temps réel"
+          ]
       }
-    },
-    "education": {
-      "degree": "Master, Dong Hwa University, Taiwan",
-      "period": "August 2017 — August 2018"
-    }
+  },
+  "compétences": {
+      "langages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
+      "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, API (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
+  },
+  "éducation": {
+      "degré": "Master of Arts (M.A.)",
+      "majeur": "Composition de musique jazz",
+      "university": "Université Dong Hwa, Taiwan",
+      "period": "Août 2017 - Août 2018"
   }
-  
+
+}

@@ -1,0 +1,55 @@
+{
+   
+    "naam": "Liko Chien",
+    "title": "Frontend-ontwikkelaar",
+    "location": "Londen, Verenigd Koninkrijk",
+    "contact": "+44 20 8638 5722",
+    "e-mail": "clwork1324@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
+    "samenvatting": {
+        "ervaring": "3 jaar ervaring met frontend-ontwikkeling, gespecialiseerd in React, TypeScript, Next.js en Redux-ecosysteem",
+        "focus": "Gericht op het optimaliseren van processen, het beveiligen van platforms en het vergroten van de gebruikersbetrokkenheid door middel van strategische ontwikkeling en innovatieve oplossingen"
+    },
+    "ervaring": {
+        "huidig": {
+            "title": "Senior frontend-ontwikkelaar",
+            "bedrijf": "Optoma Technology, Verenigd Koninkrijk (op afstand)",
+            "periode": "Mei 2023 - heden",
+            "verantwoordelijkheden": [
+                "Verbeterde teamefficiëntie door kwaliteitspoorten en geavanceerde linters te implementeren in de GitLab CI/CD-pijplijn",
+                "Ontwikkelde op Next.js gebaseerde CMS- en OAM-oplossingen met i18n, met een impact op miljoenen mensen wereldwijd",
+                "CSP- en CSRF-beveiligingen geïmplementeerd om de veiligheid te verbeteren in een projectorplatform van $ 300 miljoen, waardoor het bereik wordt uitgebreid naar 159 landen",
+                "30% bundelreductie bereikt en een algehele toename van 30% in vitale webstatistieken via codesplitsing, asset-optimalisatie en redux",
+                "Geïntegreerde Stripe API in CMS-oplossing voor veilige betalingstransacties",
+                "Ontwikkelde linters en leidde codebeoordelingen om de projectkwaliteit en naleving van normen te verbeteren",
+                "TypeScript geleerd om het SPA-project volledig te stabiliseren binnen de eerste week aan boord",
+                "De gebruikersbetrokkenheid met 25% verhoogd door een gestroomlijnde gebruikersinterface, gepersonaliseerde ervaringen en een volledig responsief ontwerp"
+            ]
+        },
+        "vorig": {
+            "title": "Frontend-ontwikkelaar",
+            "bedrijf": "Chia Sheng Real Estate, Taiwan (hybride)",
+            "periode": "januari 2021 - mei 2023",
+            "verantwoordelijkheden": [
+                "Leidde een Scrum-team en codebeoordeling, waarbij een leveringspercentage van 100% en verbeterde codekwaliteit in Jira Agile-workflows werd bereikt",
+                "De codebasis van een 4 jaar oud platform opnieuw vormgegeven met behulp van Material UI en Tailwind CSS, een volledig responsief webontwerp gerealiseerd",
+                "Met Figma en Bootstrap een intern managementsysteem ontwikkeld en ontworpen",
+                "Samengewerkt met backend om Zod-validaties en React Hook Form te implementeren, waardoor de data-integriteit en gebruikerservaring worden verbeterd",
+                "85% codedekking bereikt via unit- en integratietests met Jest en Cypress",
+                "Vereenvoudigde projectimplementatie via AWS Amplify, waardoor de operationele efficiëntie en projectschaalbaarheid worden vergroot",
+                "Gebruikt OAuth2 en JWT voor robuuste authenticatie en WebSocket-implementatie voor realtime interacties"
+            ]
+        }
+    },
+    "vaardigheden": {
+        "talen_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-in-JS",
+        "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, API's (RESTful en GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
+    },
+    "onderwijs": {
+        "graad": "Master of Arts (M.A.)",
+        "major": "Jazzmuziekcompositie",
+        "universiteit": "Dong Hwa Universiteit, Taiwan",
+        "periode": "augustus 2017 - augustus 2018"
+    }
+
+}

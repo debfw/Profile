@@ -1,56 +1,55 @@
-{  
-    "name": "CL",
+{
+   
+    "name": "Liko Chien",
     "title": "Frontend Developer",
-    "profile": {
-        "description1": "3 years in frontend development collaborating with global cross-functional teams.",
-        "description2": "Contributed $10M in conversion rates with a 25% user engagement boost and full responsive design."
+    "location": "London, United Kingdom",
+    "contact": "+44 20 8638 5722",
+    "email": "clwork1324@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
+    "summary": {
+        "experience": "3 years of frontend development experience, specializing in React, TypeScript, Next.js, and Redux ecosystem",
+        "focus": "Focused on optimizing processes, securing platforms, and enhancing user engagement through strategic development and innovative solutions"
     },
-    "details": {
-        "base": "Toronto, Canada",
-        "phone": "(+1) 647-583-9485",
-        "email": "clwork1324@gmail.com"
-    },
-    "links": {
-        "linkedin": "LinkedIn"
-    },
-    "technicalStrengths": {
-        "skills": [
-            "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Redux", "Three.js", "jQuery",
-            "SQL", "MongoDB", "AWS", "Microservices",
-            "Webpack", "Gulp", "Git", "Gitlab CICD", "Swagger", "RESTful APIs", "GraphQL", "Jira", "WebSocket",
-            "Figma", "Canvas", "CSS Frameworks and Preprocessors", "Unit Testing libraries",
-            "Agile", "Scrum"
-        ],
-        "tools": [
-            "Material-UI", "Mantine", "Bootstrap", "Tailwind CSS", "Modular CSS", "SCSS (SASS)", "LESS", "CSS-in-JS",
-            "Styled Components", "PostCSS", "Emotion", "Cypress", "Jest", "Karma", "Jasmine"
-        ]
-    },
-    "achievements": [
-        "Refactored and built tests for legacy codebase, achieving a 60% reduction in codebase vulnerabilities.",
-        "Fluent in English, Mandarin, basic Japanese."
-    ],
-    "employmentHistory": {
-        "optoma": {
-            "role": "Frontend Developer at Optoma Technology, Taiwan (Hybrid)",
-            "period": "May 2023 — Present",
-            "achievements": [
-                "Propelled team development efficiency from a 70% to a 100% code delivery rate by building GitLab CI/CD and Jira Agile boards.",
-                "Built a CMS and OAM solutions from scratch, providing full user language coverage impacting on millions of users.",
-                "Refactored the legacy code of a widely sold projector platform, achieving a 60% reduction in codebase vulnerabilities.",
-                "Strategically refactored the Optoma official website by upgrading high-level state management tools."
+    "experience": {
+        "current": {
+            "title": "Senior Frontend Developer",
+            "company": "Optoma Technology, United Kingdom (Remote)",
+            "period": "May 2023 - Present",
+            "responsibilities": [
+                "Improved team efficiency by implementing quality gates and advanced linters in the GitLab CI/CD pipeline",
+                "Developed Next.js based CMS and OAM solutions with i18n, impacting millions globally",
+                "Implemented CSP and CSRF Protections to enhance security in a $300M projector platform, expanding its reach to 159 countries",
+                "Achieved 30% Bundle Reduction and an Overall 30% Increase in Web Vital Metrics via Code Splitting, Asset Optimization, and Redux",
+                "Integrated Stripe API into CMS Solution for Secure Payment Transactions",
+                "Developed linters and led code reviews to improve project quality and adherence to standards",
+                "Learned TypeScript to fully stabilize SPA project within the first onboard week",
+                "Boosted user engagement by 25% through streamlined UI, personalized experiences, and full responsive design"
             ]
         },
-        "chiaSheng": {
-            "role": "Frontend Developer at Chia Sheng, Taiwan (Hybrid)",
-            "period": "January 2021 — May 2023",
-            "achievements": [
-                "Led a Scrum development team, responsible for the interface design, development, testing for the ChiaSheng Platform.",
-                "Enhanced user experience with third-party map search services and user registration APIs.",
-                "Proactively utilized third-party map search services and user registration APIs, contributing to a 25% increase in user engagement.",
-                "Refactored a 4-year-old internal platform codebase.",
-                "Built the primary internal management system from scratch."
+        "previous": {
+            "title": "Frontend Developer",
+            "company": "Chia Sheng Real Estate, Taiwan (Hybrid)",
+            "period": "Jan 2021 - May 2023",
+            "responsibilities": [
+                "Led a Scrum team and code review, achieving a 100% delivery rate and enhanced code quality in Jira Agile workflows",
+                "Refactored a 4-year-old platform's codebase using Material UI and Tailwind CSS, achieved full responsive web design",
+                "Developed and designed an internal management system with Figma and Bootstrap",
+                "Collaborated with backend to implement Zod validations and React Hook Form, boosting data integrity and user experience",
+                "Achieved 85% code coverage through unit and integration testing with Jest and Cypress",
+                "Simplified project deployment through AWS Amplify, boosting operational efficiency and project scalability",
+                "Utilized OAuth2 and JWT for robust authentication and WebSocket implementation for real-time interactions"
             ]
         }
+    },
+    "skills": {
+        "languages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
+        "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, APIs (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
+    },
+    "education": {
+        "degree": "Master of Arts (M.A.)",
+        "major": "Jazz Music Composition",
+        "university": "Dong Hwa University, Taiwan",
+        "period": "Aug 2017 - Aug 2018"
     }
+
 }
