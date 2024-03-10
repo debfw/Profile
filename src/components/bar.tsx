@@ -11,13 +11,19 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InboxIcon from "@mui/icons-material/Inbox";
 import { useTranslation } from "react-i18next";
 import TemporaryDrawer from "./drawer";
-
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Dialog from "@mui/material/Dialog";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -62,9 +68,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function PrimarySearchAppBar() {
   const { t } = useTranslation();
 
+  const emails = [t("email"), t("contact"), t("location")];
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
+
+  const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -72,6 +82,13 @@ export default function PrimarySearchAppBar() {
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
+  const handleOpenDialog = () => {
+    setIsDialogOpen(true)
+  }
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false)
+  }
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -129,7 +146,6 @@ export default function PrimarySearchAppBar() {
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
             {/* <MailIcon /> */}
-
           </Badge>
         </IconButton>
         <p>Messages</p>
@@ -165,7 +181,7 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-        <TemporaryDrawer/>
+          <TemporaryDrawer />
           <Typography
             variant="h6"
             noWrap
@@ -184,24 +200,37 @@ export default function PrimarySearchAppBar() {
             />
           </Search>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {/* <IconButton
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
-            >
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+            > */}
+
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
+              onClick={handleOpenDialog}
             >
-              <Badge badgeContent={17} color="error">
-                <LinkedInIcon />
-              </Badge>
+              <InboxIcon />
+            </IconButton>
+            {/* </IconButton> */}
+            <IconButton
+              size="large"
+              aria-label="show 17 new notifications"
+              color="inherit"
+              href="https://www.linkedin.com/in/liko-chien-905b42293/"
+              target="linkedin"
+              // rel="noreferrer"
+            >
+              <LinkedInIcon sx={{ color: "white" }} />
             </IconButton>
             <IconButton
               size="large"
@@ -212,7 +241,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <GitHubIcon />
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -231,6 +260,18 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      <Dialog onClose={handleCloseDialog} open={isDialogOpen}>
+      <DialogTitle>Challenge me</DialogTitle>
+      <List sx={{ pt: 0 }}>
+        {emails.map((email) => (
+          <ListItem disableGutters key={email}>
+            <ListItemButton onClick={() => handleCloseDialog()}>
+              <ListItemText primary={email} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Dialog>
     </Box>
   );
 }

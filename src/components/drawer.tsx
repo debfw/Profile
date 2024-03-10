@@ -13,6 +13,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { IconButton } from "@mui/material";
 
+
 export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
 
@@ -53,13 +54,11 @@ export default function TemporaryDrawer() {
   return (
     <div>
       <Button onClick={toggleDrawer(true)}>
-        {" "}
         <IconButton
           size="large"
           edge="start"
-          color="primary"
           aria-label="open drawer"
-          sx={{ mr: 2 }}
+          sx={{ mr: 2, color:'white'}}
         >
           <MenuIcon />
         </IconButton>
