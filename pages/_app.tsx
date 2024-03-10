@@ -6,6 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { appWithTranslation } from "next-i18next";
 import theme from "../src/theme";
+import { Box } from "@mui/material";
 
 const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props;
@@ -17,7 +18,15 @@ const MyApp = (props: AppProps) => {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Component {...pageProps} />
+        <Box
+          sx={{
+            display: "flex",
+            alignItem: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Component {...pageProps} />
+        </Box>
       </ThemeProvider>
     </AppCacheProvider>
   );
