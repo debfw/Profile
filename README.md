@@ -1,30 +1,53 @@
-# React + TypeScript + Vite
+# Personal Profile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal profile using Next.js, React, Typescript, MUI, i18n, chatgpt API for AI chatbox
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+First, install the dependencies:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Scripts
+
+- `dev`: Runs the application in development mode.
+- `build`: Builds the application for production usage.
+- `start`: Starts a simple server with the build production code.
+- `lint`: Runs the linter for your code.
+
+## Built With
+
+- [Next.js](https://nextjs.org/) - The React framework for production.
+- [@emotion](https://emotion.sh/docs/introduction) - Library for writing css styles with JavaScript.
+- [Material-UI](https://mui.com/) - React UI framework for faster and easier web development.
+- [Fontsource Roboto](https://fontsource.org/fonts/roboto) - Self-hostable Open Source fonts for your project.
+- [Font Awesome](https://fontawesome.com/) - The web's most popular icon set and toolkit.
+- [i18next](https://www.i18next.com/) - Internationalization-framework written in and for JavaScript.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the tags on this repository.
+
+## Authors
+
+* **[Your Name]** - *Initial work*
+
+## License
+
+This project is private and proprietary.
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
