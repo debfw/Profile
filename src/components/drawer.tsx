@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
@@ -12,7 +11,6 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { IconButton } from "@mui/material";
-
 
 export default function TemporaryDrawer() {
   const [open, setOpen] = React.useState(false);
@@ -53,16 +51,15 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>
-        <IconButton
-          size="large"
-          edge="start"
-          aria-label="open drawer"
-          sx={{ mr: 2, color:'white'}}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Button>
+      <IconButton
+        onClick={toggleDrawer(true)}
+        size="large"
+        edge="start"
+        aria-label="open drawer"
+        sx={{ mr: 2, color: "white" }}
+      >
+        <MenuIcon />
+      </IconButton>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>

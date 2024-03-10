@@ -84,11 +84,11 @@ export default function PrimarySearchAppBar() {
   };
 
   const handleOpenDialog = () => {
-    setIsDialogOpen(true)
-  }
+    setIsDialogOpen(true);
+  };
   const handleCloseDialog = () => {
-    setIsDialogOpen(false)
-  }
+    setIsDialogOpen(false);
+  };
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
@@ -144,9 +144,7 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            {/* <MailIcon /> */}
-          </Badge>
+          <Badge badgeContent={4} color="error"></Badge>
         </IconButton>
         <p>Messages</p>
       </MenuItem>
@@ -261,17 +259,17 @@ export default function PrimarySearchAppBar() {
       {renderMobileMenu}
       {renderMenu}
       <Dialog onClose={handleCloseDialog} open={isDialogOpen}>
-      <DialogTitle>Challenge me</DialogTitle>
-      <List sx={{ pt: 0 }}>
-        {emails.map((email) => (
-          <ListItem disableGutters key={email}>
-            <ListItemButton onClick={() => handleCloseDialog()}>
-              <ListItemText primary={email} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Dialog>
+        <DialogTitle>Challenge me</DialogTitle>
+        <List sx={{ pt: 0 }}>
+          {emails.map((email) => (
+            <ListItem disableGutters key={email}>
+              <ListItemButton onClick={() => handleCloseDialog()}>
+                <ListItemText primary={email} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Dialog>
     </Box>
   );
 }
