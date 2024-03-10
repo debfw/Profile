@@ -16,7 +16,7 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InboxIcon from "@mui/icons-material/Inbox";
-import { useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next";
 import TemporaryDrawer from "./drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -205,12 +205,6 @@ export default function PrimarySearchAppBar() {
               alignItems: "center",
             }}
           >
-            {/* <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            > */}
-
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
@@ -219,14 +213,13 @@ export default function PrimarySearchAppBar() {
             >
               <InboxIcon />
             </IconButton>
-            {/* </IconButton> */}
+
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
               href="https://www.linkedin.com/in/liko-chien-905b42293/"
               target="linkedin"
-              // rel="noreferrer"
             >
               <LinkedInIcon sx={{ color: "white" }} />
             </IconButton>
@@ -259,7 +252,7 @@ export default function PrimarySearchAppBar() {
       {renderMobileMenu}
       {renderMenu}
       <Dialog onClose={handleCloseDialog} open={isDialogOpen}>
-        <DialogTitle>Challenge me</DialogTitle>
+        <DialogTitle>Let's chat</DialogTitle>
         <List sx={{ pt: 0 }}>
           {emails.map((email) => (
             <ListItem disableGutters key={email}>
