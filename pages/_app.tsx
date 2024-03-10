@@ -1,12 +1,13 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { AppProps } from 'next/app';
-import { AppCacheProvider } from '@mui/material-nextjs/v14-pagesRouter';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from '../src/theme';
+import * as React from "react";
+import Head from "next/head";
+import { AppProps } from "next/app";
+import { AppCacheProvider } from "@mui/material-nextjs/v14-pagesRouter";
+import { ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import { appWithTranslation } from "next-i18next";
+import theme from "../src/theme";
 
-export default function MyApp(props: AppProps) {
+const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props;
   return (
     <AppCacheProvider {...props}>
@@ -20,4 +21,6 @@ export default function MyApp(props: AppProps) {
       </ThemeProvider>
     </AppCacheProvider>
   );
-}
+};
+
+export default appWithTranslation(MyApp);

@@ -3,8 +3,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import { useTranslation } from "react-i18next";
-
+import { useTranslation } from "next-i18next"
 export default function ActionAreaCard() {
   const { t } = useTranslation();
   return (

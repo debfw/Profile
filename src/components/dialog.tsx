@@ -8,7 +8,7 @@ import ListItemText from "@mui/material/ListItemText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next"
 
 export interface SimpleDialogProps {
   open: boolean;

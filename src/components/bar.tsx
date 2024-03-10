@@ -16,7 +16,7 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InboxIcon from "@mui/icons-material/Inbox";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next"
 import TemporaryDrawer from "./drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";

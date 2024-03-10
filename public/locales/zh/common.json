@@ -1,0 +1,55 @@
+{
+   
+    "name": "Liko Chien",
+    "title": "Frontend Developer",
+    "location": "London, United Kingdom",
+    "contact": "+44 20 8638 5722",
+    "email": "clwork1324@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
+    "summary": {
+        "experience": "3 years of frontend development experience, specializing in React, TypeScript, Next.js, and Redux ecosystem",
+        "focus": "Focused on optimizing processes, securing platforms, and enhancing user engagement through strategic development and innovative solutions"
+    },
+    "experience": {
+        "current": {
+            "title": "Senior Frontend Developer",
+            "company": "Optoma Technology, United Kingdom (Remote)",
+            "period": "May 2023 - Present",
+            "responsibilities": [
+                "Improved team efficiency by implementing quality gates and advanced linters in the GitLab CI/CD pipeline",
+                "Developed Next.js based CMS and OAM solutions with i18n, impacting millions globally",
+                "Implemented CSP and CSRF Protections to enhance security in a $300M projector platform, expanding its reach to 159 countries",
+                "Achieved 30% Bundle Reduction and an Overall 30% Increase in Web Vital Metrics via Code Splitting, Asset Optimization, and Redux",
+                "Integrated Stripe API into CMS Solution for Secure Payment Transactions",
+                "Developed linters and led code reviews to improve project quality and adherence to standards",
+                "Learned TypeScript to fully stabilize SPA project within the first onboard week",
+                "Boosted user engagement by 25% through streamlined UI, personalized experiences, and full responsive design"
+            ]
+        },
+        "previous": {
+            "title": "Frontend Developer",
+            "company": "Chia Sheng Real Estate, Taiwan (Hybrid)",
+            "period": "Jan 2021 - May 2023",
+            "responsibilities": [
+                "Led a Scrum team and code review, achieving a 100% delivery rate and enhanced code quality in Jira Agile workflows",
+                "Refactored a 4-year-old platform's codebase using Material UI and Tailwind CSS, achieved full responsive web design",
+                "Developed and designed an internal management system with Figma and Bootstrap",
+                "Collaborated with backend to implement Zod validations and React Hook Form, boosting data integrity and user experience",
+                "Achieved 85% code coverage through unit and integration testing with Jest and Cypress",
+                "Simplified project deployment through AWS Amplify, boosting operational efficiency and project scalability",
+                "Utilized OAuth2 and JWT for robust authentication and WebSocket implementation for real-time interactions"
+            ]
+        }
+    },
+    "skills": {
+        "languages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
+        "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, APIs (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
+    },
+    "education": {
+        "degree": "Master of Arts (M.A.)",
+        "major": "Jazz Music Composition",
+        "university": "Dong Hwa University, Taiwan",
+        "period": "Aug 2017 - Aug 2018"
+    }
+
+}
