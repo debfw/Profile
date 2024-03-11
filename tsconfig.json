@@ -30,7 +30,7 @@
     "src",
     "src/i18n.config.ts",
     "pages"
-  ],
+, "api/sendEmail.tsx"  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

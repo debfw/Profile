@@ -9,7 +9,7 @@ import LongTextSnackbar from "../src/components/snackbar";
 // Define the page component, potentially rename `App` to reflect the page's purpose if it's not the main app entry
 function HomePage() {
   return (
-    <Box sx={{ margin:'30px' }}>
+    <Box sx={{ margin:'30px'}}>
       <PrimarySearchAppBar />
       <ActionAreaCard />
       <LongTextSnackbar/>

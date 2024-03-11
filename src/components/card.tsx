@@ -18,7 +18,7 @@ export default function ActionAreaCard() {
             width: 100,
             borderRadius: "50%",
             position:'fixed',
-            right:150,
+            right:50,
             top:230,
           }}
         />

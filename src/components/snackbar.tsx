@@ -6,7 +6,7 @@ import { useTranslation } from 'next-i18next';
 
 const action = (
   <Button color="secondary" size="small">
-    AI helper
+    AI assistant
   </Button>
 );
 

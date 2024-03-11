@@ -19,11 +19,9 @@ import InboxIcon from "@mui/icons-material/Inbox";
 import { useTranslation } from "next-i18next";
 import TemporaryDrawer from "./drawer";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
+import EmailInputbox from "./inputbox";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -68,7 +66,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function PrimarySearchAppBar() {
   const { t } = useTranslation();
 
-  const emails = [t("email"), t("contact"), t("location")];
+  // const emails = [ t("email"), t("contact")];
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
@@ -207,7 +205,7 @@ export default function PrimarySearchAppBar() {
           >
             <IconButton
               size="large"
-              aria-label="show 17 new notifications"
+              aria-label="Inbox"
               color="inherit"
               onClick={handleOpenDialog}
             >
@@ -216,7 +214,7 @@ export default function PrimarySearchAppBar() {
 
             <IconButton
               size="large"
-              aria-label="show 17 new notifications"
+              aria-label="LinkedIn"
               color="inherit"
               href="https://www.linkedin.com/in/liko-chien-905b42293/"
               target="linkedin"
@@ -226,11 +224,12 @@ export default function PrimarySearchAppBar() {
             <IconButton
               size="large"
               edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              aria-label="Github"
+              // aria-controls={menuId}
+              // aria-haspopup="true"
+              // onClick={handleProfileMenuOpen}
               color="inherit"
+              href="https://github.com/debfw?tab=overview&from=2024-03-01&to=2024-03-10"
             >
               <GitHubIcon />
             </IconButton>
@@ -254,13 +253,14 @@ export default function PrimarySearchAppBar() {
       <Dialog onClose={handleCloseDialog} open={isDialogOpen}>
         <DialogTitle>Let's chat</DialogTitle>
         <List sx={{ pt: 0 }}>
-          {emails.map((email) => (
-            <ListItem disableGutters key={email}>
-              <ListItemButton onClick={() => handleCloseDialog()}>
-                <ListItemText primary={email} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+         
+            {/* <ListItem disableGutters key={email}> */}
+              <EmailInputbox />
+              {/* <ListItemButton onClick={() => handleCloseDialog()}> */}
+                {/* <ListItemText primary={email} /> */}
+              {/* </ListItemButton> */}
+            {/* </ListItem> */}
+    
         </List>
       </Dialog>
     </Box>
