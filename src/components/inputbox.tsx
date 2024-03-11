@@ -27,7 +27,7 @@ export default function EmailInputbox() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ recipeintEmail: email }),
+      body: JSON.stringify({ recipientEmail: email }),
     });
     const data = await response.json();
     console.log(data);
