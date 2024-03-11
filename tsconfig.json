@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2020",
+    "types": ["node"],
     "useDefineForClassFields": true,
     "lib": [
       "ES2020",
@@ -31,11 +32,6 @@
     "src/i18n.config.ts",
     "pages"
 , "pages/api/sendEmail.tsx"  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
   "exclude": [
     "node_modules"
   ]
