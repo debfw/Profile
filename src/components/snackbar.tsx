@@ -11,7 +11,9 @@ const action = (
 );
 
 export default function LongTextSnackbar() {
-    const { t } = useTranslation();
+
+
+  const { t } = useTranslation();
 
   return (
     <Stack spacing={2} sx={{ maxWidth: 500, mt:3 }}>

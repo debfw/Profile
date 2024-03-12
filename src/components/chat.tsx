@@ -1,57 +1,47 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-interface Message {
-  role: 'user' | 'bot';
-  content: string;
-}
+export function Chat() {
+  const [response, setResponse] = useState("");
 
-export const Chat = () => {
-  const [input, setInput] = useState(''); // State for the input field
-  const [messages, setMessages] = useState<Message[]>([]); // State to store chat messages
-
-  const sendMessageToServer = async (inputMessage:string) => {
-    try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ message: inputMessage }), 
-      });
-  
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/openai", {
+          method: "POST",
+          body: JSON.stringify({
+            messages: [
+              {
+                role: "system",
+                content:
+                  "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.",
+              },
+              {
+                role: "user",
+                content:
+                  "Compose a poem that explains the concept of recursion in programming.",
+              },
+            ],
+          }),
+        });
+        const data = await response.json();
+        console.log(data);
+        if (data.choices && data.choices.length > 0) {
+          setResponse(data.choices[0].text);
+        } else {
+          setResponse("No response data found.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        setResponse("Error fetching data.");
       }
-  
-      const data = await response.json();
-      console.log(data)
-      setMessages((prevMessages) => [...prevMessages, { role: 'user', content: inputMessage }, { role: 'bot', content: data }]); 
-      setInput(''); 
-    } catch (error) {
-      console.error('Error sending message:', error);
-    }
-  };
-
-  const sendMessage = () => {
-    if (!input.trim()) return; 
-    sendMessageToServer(input);
-  };
+    };
+    fetchData();
+  }, []);
 
   return (
     <div>
-      <div>
-        {messages.map((msg, index) => (
-          <p key={index}><strong>{msg.role}:</strong> {msg.content}</p>
-        ))}
-      </div>
-      <input
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        type="text"
-        placeholder="Type a message..."
-      />
-      <button onClick={sendMessage}>Send</button>
+      <h1>OpenAI </h1>
+      <p>{response}</p>
     </div>
   );
-};
-
+}

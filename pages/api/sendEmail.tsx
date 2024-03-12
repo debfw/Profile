@@ -1,35 +1,32 @@
 import { MailerSend, EmailParams, Sender, Recipient } from "mailersend";
-import { render } from '@react-email/render';
-import React from 'react';
-import { EmailButton } from "../../src/components/emailbutton";
 import { NextApiRequest, NextApiResponse } from 'next';
 
 
-export default async function handler({req, res}:{req:NextApiRequest, res:NextApiResponse}) {
-  if (req.method !== 'POST') {
+
+export default async function handler(req: NextApiRequest,
+  res: NextApiResponse) {
+  if (req?.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
-  // Assuming the recipient's email is passed in the request body
-  const { recipientEmail } = req.body; 
+  // Render your EmailButton component to HTML
+  const recipientEmail = 'clwork1324@gmail.com'; 
 
   // Initialize the MailerSend object with your API key
   const mailerSend = new MailerSend({
     apiKey: process.env.MAILERSEND_API_KEY as string,
   });
 
-  // Render your EmailButton component to HTML
-  const emailHtml = render(<EmailButton url="clwork1324@gmail.com"/>); 
 
-  const sentFrom = new Sender("trial-vywj2lpxmq147oqz.mlsender.net", "liko");
-  const recipients = [new Recipient(recipientEmail, "Recipient Name")]; // Use the recipientEmail from the request
+  const sentFrom = new Sender("noreply@trial-vywj2lpxmq147oqz.mlsender.net", "Profile");
+  const recipients = [new Recipient(recipientEmail, "Liko")]; 
 
   // Construct the email parameters
   const emailParams = new EmailParams()
     .setFrom(sentFrom)
     .setTo(recipients)
     .setSubject("This is a Subject")
-    .setHtml(emailHtml); 
+    .setHtml('<p>This is the email content</p>'); 
 
   try {
     await mailerSend.email.send(emailParams);

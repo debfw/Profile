@@ -253,14 +253,12 @@ export default function PrimarySearchAppBar() {
       <Dialog onClose={handleCloseDialog} open={isDialogOpen}>
         <DialogTitle>Let's chat</DialogTitle>
         <List sx={{ pt: 0 }}>
-         
-            {/* <ListItem disableGutters key={email}> */}
-              <EmailInputbox />
-              {/* <ListItemButton onClick={() => handleCloseDialog()}> */}
-                {/* <ListItemText primary={email} /> */}
-              {/* </ListItemButton> */}
-            {/* </ListItem> */}
-    
+          {/* <ListItem disableGutters key={email}> */}
+          <EmailInputbox />
+          {/* <ListItemButton onClick={() => handleCloseDialog()}> */}
+          {/* <ListItemText primary={email} /> */}
+          {/* </ListItemButton> */}
+          {/* </ListItem> */}
         </List>
       </Dialog>
     </Box>

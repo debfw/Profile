@@ -2,8 +2,7 @@ import * as React from "react";
 import FormControl, { useFormControl } from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import FormHelperText from "@mui/material/FormHelperText";
-import { Box } from "@mui/material";
-import { EmailButton } from "./emailbutton";
+import { Box, Button } from "@mui/material";
 
 function MyFormHelperText() {
   const { focused } = useFormControl() || {};
@@ -18,11 +17,12 @@ function MyFormHelperText() {
   return <FormHelperText>{helperText}</FormHelperText>;
 }
 
+
 export default function EmailInputbox() {
   const [email, setEmail] = React.useState("");
-  const handleSubmit = async (e:React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    const response = await fetch("/api/send-email", {
+    const response = await fetch("/api/sendEmail", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,15 +64,7 @@ export default function EmailInputbox() {
         />
         <MyFormHelperText />
         <Box sx={{ display: "flex", justifyContent: "end" }}>
-          {/* <Button
-            type="submit"
-            color="secondary"
-            sx={{ width: 15, height: 25 }}
-            variant="contained"
-          >
-          Send
-          </Button> */}
-          <EmailButton url="clwork1324@gmail.com" />
+         <Button onClick={handleSubmit}>Click me</Button>
         </Box>
       </FormControl>
     </form>
