@@ -24,7 +24,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
   },
   "& .MuiSwitch-thumb": {
-    backgroundColor: theme.palette.mode === "dark" ? "#003892" : "#001e3c",
+    backgroundColor: theme.palette.mode === "dark" ? "black" : "#001e3c",
     width: 32,
     height: 32,
     "&::before": {
@@ -52,7 +52,7 @@ export default function Switch() {
   return (
     <FormControlLabel
       control={<MaterialUISwitch sx={{ m: 1 }} />}
-      label="MUI switch"
+      label="background color switch"
     />
   );
 }

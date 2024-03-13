@@ -17,11 +17,12 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InboxIcon from "@mui/icons-material/Inbox";
 import { useTranslation } from "next-i18next";
-import TemporaryDrawer from "./drawer";
+import MenuIcon from "@mui/icons-material/Menu";
 import List from "@mui/material/List";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
-import EmailInputbox from "./inputbox";
+import EmailInputbox from "./EmailInputbox";
+import IconAvatars from "./IconAvatars";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -66,8 +67,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function PrimarySearchAppBar() {
   const { t } = useTranslation();
 
-  // const emails = [ t("email"), t("contact")];
-
+  const [showAvatars, setShowAvatars] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
@@ -101,6 +101,9 @@ export default function PrimarySearchAppBar() {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+  const toggleAvatars = () => {
+    setShowAvatars(!showAvatars);
+  };
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -177,7 +180,17 @@ export default function PrimarySearchAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <TemporaryDrawer />
+          <IconButton
+            onClick={() => toggleAvatars()}
+            size="large"
+            edge="start"
+            aria-label="open drawer"
+            sx={{ mr: 2, color: "white" }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Box sx={{position:"absolute", left:-80, top:10}}> {showAvatars ? <IconAvatars /> : null}</Box>
+
           <Typography
             variant="h6"
             noWrap

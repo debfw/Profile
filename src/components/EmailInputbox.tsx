@@ -17,9 +17,9 @@ function MyFormHelperText() {
   return <FormHelperText>{helperText}</FormHelperText>;
 }
 
-
 export default function EmailInputbox() {
   const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     const response = await fetch("/api/sendEmail", {
@@ -27,11 +27,13 @@ export default function EmailInputbox() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ recipientEmail: email }),
+      body: JSON.stringify({ senderEmail: email, message:message }),
     });
     const data = await response.json();
     console.log(data);
+    console.log(email, message)
   };
+
   return (
     <form noValidate autoComplete="on" onSubmit={handleSubmit}>
       <FormControl sx={{ width: "25ch", height: 200, margin: 2 }}>
@@ -41,7 +43,7 @@ export default function EmailInputbox() {
           onChange={(e) => setEmail(e.target.value)}
           sx={{
             height: 50,
-            marginBottom:1,
+            marginBottom: 1,
             alignItems: "start",
             "& .MuiInputBase-input::placeholder": {
               fontSize: "0.7rem",
@@ -51,7 +53,9 @@ export default function EmailInputbox() {
           }}
         />
         <OutlinedInput
+          value={message}
           placeholder="Send to clwork1324@gmail.com"
+          onChange={(e) => setMessage(e.target.value)}
           sx={{
             height: 150,
             alignItems: "start",
@@ -64,7 +68,7 @@ export default function EmailInputbox() {
         />
         <MyFormHelperText />
         <Box sx={{ display: "flex", justifyContent: "end" }}>
-         <Button onClick={handleSubmit}>Click me</Button>
+          <Button onClick={handleSubmit}>Click me</Button>
         </Box>
       </FormControl>
     </form>
