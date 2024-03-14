@@ -1,7 +1,7 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Box, CardActionArea, Switch } from "@mui/material";
+import { Box, CardActionArea } from "@mui/material";
 import { useTranslation } from "next-i18next";
 export default function ProfileCard() {
   const { t } = useTranslation();
@@ -14,7 +14,6 @@ export default function ProfileCard() {
             <Typography gutterBottom variant="h5" component="div">
               {t("title")}
             </Typography>
-            <Switch />
           </Box>
           <Typography variant="body2" color="text.secondary">
             {t("summary.focus")}

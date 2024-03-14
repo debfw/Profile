@@ -9,18 +9,23 @@ import { useCardContext } from "../src/contexts/CardContext";
 import ExperienceCard from "./Experience";
 import PortFolioCard from "./Portfolio";
 import SkillSetCard from "./Skillsets";
+import Header from "../src/components/header";
 
 function HomePage() {
-  const { isExperienceVisible, isPortfolioVisible, isSkillSetVisible } = useCardContext();
+  const { isExperienceVisible, isPortfolioVisible, isSkillSetVisible } =
+    useCardContext();
 
   return (
     <Box sx={{ margin: "30px" }}>
+      <Header />
       <PrimarySearchAppBar />
       <ProfileCard />
       <ChatSnackbar />
-      {isExperienceVisible && <ExperienceCard />}
-      {isPortfolioVisible && <PortFolioCard />}
-      {isSkillSetVisible && <SkillSetCard />}
+      <Box sx={{ "& > *:not(:first-child)": { mt: 5 } }}>
+        {isExperienceVisible && <ExperienceCard />}
+        {isPortfolioVisible && <PortFolioCard />}
+        {isSkillSetVisible && <SkillSetCard />}
+      </Box>
     </Box>
   );
 }

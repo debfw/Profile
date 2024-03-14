@@ -3,6 +3,7 @@ import FormControl, { useFormControl } from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import FormHelperText from "@mui/material/FormHelperText";
 import { Box, Button } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 
 function MyFormHelperText() {
   const { focused } = useFormControl() || {};
@@ -27,11 +28,11 @@ export default function EmailInputbox() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ senderEmail: email, message:message }),
+      body: JSON.stringify({ senderEmail: email, message: message }),
     });
     const data = await response.json();
     console.log(data);
-    console.log(email, message)
+    console.log(email, message);
   };
 
   return (
@@ -62,13 +63,15 @@ export default function EmailInputbox() {
             "& .MuiInputBase-input::placeholder": {
               fontSize: "0.7rem",
               lineHeight: "1",
-              color: "secondary",
+              color: "primary",
             },
           }}
         />
         <MyFormHelperText />
-        <Box sx={{ display: "flex", justifyContent: "end" }}>
-          <Button onClick={handleSubmit}>Click me</Button>
+        <Box sx={{ display: "flex", justifyContent: "end" , marginTop:1}}>
+          <Button onClick={handleSubmit}   sx={{ color: 'black' }}>
+            Send mail    <SendIcon sx={{marginLeft:1}}/>
+          </Button>
         </Box>
       </FormControl>
     </form>

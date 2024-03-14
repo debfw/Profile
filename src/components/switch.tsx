@@ -1,7 +1,7 @@
-import { FormControlLabel } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import Switch from "@mui/material/Switch";
 
-const MaterialUISwitch = styled(Switch)(({ theme }) => ({
+export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
@@ -24,7 +24,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
   },
   "& .MuiSwitch-thumb": {
-    backgroundColor: theme.palette.mode === "dark" ? "black" : "#001e3c",
+    backgroundColor: theme.palette.mode === "dark" ? "#003892" : "#001e3c",
     width: 32,
     height: 32,
     "&::before": {
@@ -47,12 +47,3 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     borderRadius: 20 / 2,
   },
 }));
-
-export default function Switch() {
-  return (
-    <FormControlLabel
-      control={<MaterialUISwitch sx={{ m: 1 }} />}
-      label="background color switch"
-    />
-  );
-}

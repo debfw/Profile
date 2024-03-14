@@ -16,7 +16,6 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InboxIcon from "@mui/icons-material/Inbox";
-import { useTranslation } from "next-i18next";
 import MenuIcon from "@mui/icons-material/Menu";
 import List from "@mui/material/List";
 import DialogTitle from "@mui/material/DialogTitle";
@@ -65,8 +64,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function PrimarySearchAppBar() {
-  const { t } = useTranslation();
-
   const [showAvatars, setShowAvatars] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
@@ -177,9 +174,9 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 , color:'black'}}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar  sx={{ backgroundColor:'black'}}>
           <IconButton
             onClick={() => toggleAvatars()}
             size="large"
@@ -189,15 +186,17 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{position:"absolute", left:-80, top:10}}> {showAvatars ? <IconAvatars /> : null}</Box>
+          <Box sx={{ position: "absolute", left: -80, top: 10 }}>
+            {" "}
+            {showAvatars ? <IconAvatars /> : null}
+          </Box>
 
           <Typography
             variant="h6"
-            noWrap
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
           >
-            {t("name")}
+           my resume
           </Typography>
           <Search>
             <SearchIconWrapper>

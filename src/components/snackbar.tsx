@@ -44,15 +44,14 @@ export default function ChatSnackbar() {
   };
 
   return (
-    <Stack spacing={2} sx={{ mt: 3 }}>
+    <Stack spacing={2} sx={{ m: 3 }}>
       <Box
         sx={{
           display: "flex",
           alignItems: "baseline",
-          justifyContent: "spaceEvenly",
+          justifyContent: "space-evenly",
         }}
       >
-        {" "}
         <TextField
           label="Ask me anything"
           color="secondary"
@@ -61,17 +60,26 @@ export default function ChatSnackbar() {
           onChange={handleChange}
           sx={{ marginTop: "20px", width: 500 }}
         />
-        <Button color="primary" variant="contained" onClick={fetchData}>
+        <Button
+          color="primary"
+          variant="contained"
+          onClick={fetchData}
+          sx={{ backgroundColor: "black" }}
+        >
           Send
         </Button>
       </Box>
-      <Box sx={{ display: "flex"}}>
+      <Box sx={{ display: "flex" }}>
         <Avatar
           alt="Liko"
           src="/155625133.png"
           sx={{ width: 56, height: 56, marginRight: 1 }}
         />
-        <SnackbarContent message={response ? response : "Awaiting input..."} />
+        <SnackbarContent message={response ? response : "Awaiting input..."}
+        sx={{
+        width: '100%',
+        maxWidth: '800px', 
+      }} />
       </Box>{" "}
     </Stack>
   );
