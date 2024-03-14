@@ -1,6 +1,6 @@
 # Personal Profile
 
-This is a personal profile using Next.js, React, Typescript, MUI, i18n, chatgpt API for AI chatbox
+This is a personal profile using Next.js, React, Typescript, MUI, i18n, chatgpt API for AI chatbox and Docker
 
 ## Getting Started
 
