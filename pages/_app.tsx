@@ -7,6 +7,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { appWithTranslation } from "next-i18next";
 import theme from "../src/theme";
 import { Box } from "@mui/material";
+import { CardProvider } from "../src/contexts/CardContext";
 
 const MyApp = (props: AppProps) => {
   const { Component, pageProps } = props;
@@ -25,7 +26,10 @@ const MyApp = (props: AppProps) => {
             justifyContent: "center",
           }}
         >
-          <Component {...pageProps} />
+          <CardProvider>
+            {" "}
+            <Component {...pageProps} />
+          </CardProvider>
         </Box>
       </ThemeProvider>
     </AppCacheProvider>

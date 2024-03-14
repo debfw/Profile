@@ -6,21 +6,24 @@ import SchoolIcon from "@mui/icons-material/School";
 import CategoryIcon from "@mui/icons-material/Category";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import { Button } from "@mui/material";
+import { useCardContext } from "../contexts/CardContext";
 
 export default function IconAvatars() {
+  const { toggleExperienceVisibility, togglePortfolioVisibility, toggleSkillSetVisibility } =
+    useCardContext();
   return (
     <Stack direction="column" spacing={0} width={100}>
-      <Button>
+      <Button onClick={toggleSkillSetVisibility}>
         <Avatar>
           <CategoryIcon />
         </Avatar>
       </Button>
-      <Button sx={{alignSelf:'start'}}>
+      <Button sx={{ alignSelf: "start" }} onClick={toggleExperienceVisibility}>
         <Avatar sx={{ bgcolor: pink[500] }}>
           <SchoolIcon />
         </Avatar>
       </Button>
-      <Button>
+      <Button onClick={togglePortfolioVisibility}>
         <Avatar sx={{ bgcolor: green[500] }}>
           <AssignmentIcon />
         </Avatar>
