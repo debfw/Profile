@@ -8,11 +8,13 @@ import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
+import InsertLinkIcon from "@mui/icons-material/InsertLink";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import CloseIcon from "@mui/icons-material/Close";
 import { useTranslation } from "next-i18next";
+import { Link } from "@mui/material";
+import { useCardContext } from "../contexts/CardContext";
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
@@ -35,20 +37,26 @@ export default function ExperienceCard() {
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-
+  const { toggleExperienceVisibility } = useCardContext();
   const responsibilities = t("experience.current.responsibilities", {
     returnObjects: true,
   }) as string[];
+  const midPoint = Math.ceil(responsibilities.length / 2);
+  const firstHalf = responsibilities.slice(0, midPoint);
+
   const ChiaShengresponsibilities = t("experience.previous.responsibilities", {
     returnObjects: true,
   }) as string[];
 
   return (
-    <Card sx={{ maxWidth: 700 }}>
+    <Card sx={{ maxWidth: 600 }}>
       <CardHeader
         action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
+          <IconButton
+            aria-label="settings"
+            onClick={toggleExperienceVisibility}
+          >
+            <CloseIcon />
           </IconButton>
         }
         title={t("experience.current.company")}
@@ -59,10 +67,11 @@ export default function ExperienceCard() {
         height="194"
         image="/optoma.png"
         alt="optoma"
+        sx={{ padding: 1 }}
       />
       <CardContent>
         <div>
-          {responsibilities.map((responsibility, index) => (
+          {firstHalf.map((responsibility, index) => (
             <Typography key={index} variant="body2" color="text.secondary">
               {responsibility}
             </Typography>
@@ -70,11 +79,10 @@ export default function ExperienceCard() {
         </div>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
+          <Link href="https://www.optoma.co.uk/">
+            <InsertLinkIcon />
+          </Link>
         </IconButton>
         <ExpandMore
           expand={expanded}
@@ -87,15 +95,22 @@ export default function ExperienceCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-        <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={t("experience.previous.company")}
-        subheader={t("experience.previous.title")}
-      />
+          <CardHeader
+            action={
+              <IconButton aria-label="settings">
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title={t("experience.previous.company")}
+            subheader={t("experience.previous.title")}
+          />
+          <CardMedia
+            component="img"
+            height="194"
+            image="/chiaSheng.png"
+            alt="chiaSheng"
+            sx={{ padding: 1 }}
+          />
           <div>
             {ChiaShengresponsibilities.map((responsibility, index) => (
               <Typography key={index} variant="body2" color="text.secondary">

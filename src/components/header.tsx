@@ -1,7 +1,7 @@
 import * as React from "react";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { MaterialUISwitch } from "./switch";
+// import { MaterialUISwitch } from "./switch";
 
 export default function Header() {
   return (
@@ -17,7 +17,7 @@ export default function Header() {
         >
           Liko Chien
         </Typography>
-        <MaterialUISwitch />
+        {/* <MaterialUISwitch /> */}
       </Toolbar>
       <Toolbar
         component="nav"
