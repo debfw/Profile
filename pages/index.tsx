@@ -75,7 +75,8 @@ function HomePage() {
             marginRight: 1,
             position: "fixed",
             zIndex: 100,
-            background:'lightgrey'
+            bottom: 100,
+            right: 2,
           }}
         >
           <Button onClick={toggleSnackbarVisibility}>
