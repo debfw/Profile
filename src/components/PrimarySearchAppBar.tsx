@@ -4,7 +4,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
@@ -22,6 +21,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import EmailInputbox from "./EmailInputbox";
 import IconAvatars from "./IconAvatars";
+import { Button } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -174,9 +174,9 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 , color:'black'}}>
+    <Box sx={{ flexGrow: 1, color: "black" }}>
       <AppBar position="static">
-        <Toolbar  sx={{ backgroundColor:'black'}}>
+        <Toolbar sx={{ backgroundColor: "black" }}>
           <IconButton
             onClick={() => toggleAvatars()}
             size="large"
@@ -191,13 +191,16 @@ export default function PrimarySearchAppBar() {
             {showAvatars ? <IconAvatars /> : null}
           </Box>
 
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
+          <Button
+            variant="contained"
+            component="a"
+            href="/resume.pdf"
+            download="resume.pdf"
+            sx={{ backgroundColor: "white", color: "black" }}
           >
-           my resume
-          </Typography>
+            Download My Resume
+          </Button>
+
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

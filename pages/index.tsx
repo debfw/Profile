@@ -16,7 +16,7 @@ function HomePage() {
     useCardContext();
 
   return (
-    <Box sx={{ marginTop: "200px" }}>
+    <Box sx={{ marginTop: "100px" }}>
       <Header />
       <PrimarySearchAppBar />
       <ProfileCard />

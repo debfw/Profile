@@ -7,7 +7,6 @@ import { Avatar, Box, TextField } from "@mui/material";
 export default function ChatSnackbar() {
   const [response, setResponse] = React.useState("");
   const [inputValue, setInputValue] = React.useState("");
-  console.log(inputValue);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
