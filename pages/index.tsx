@@ -74,7 +74,7 @@ function HomePage() {
           sx={{
             marginRight: 1,
             position: "fixed",
-            bottom: 180,
+            bottom: 120,
             right: 100,
             zIndex: 100,
           }}
