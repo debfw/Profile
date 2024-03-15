@@ -32,7 +32,7 @@ function HomePage() {
   return (
     <Box sx={{ marginTop: "100px" }}>
       {isSmallScreen ? (
-        <Box sx={{ margin:1}}>
+        <Box sx={{ margin: 1 }}>
           {" "}
           <Header />
           <PrimarySearchAppBar />
@@ -74,8 +74,6 @@ function HomePage() {
           sx={{
             marginRight: 1,
             position: "fixed",
-            bottom: 120,
-            right: 100,
             zIndex: 100,
           }}
         >
