@@ -5,12 +5,10 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
-import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
+import DownloadIcon from "@mui/icons-material/Download";
 import Menu from "@mui/material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -21,7 +19,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import EmailInputbox from "./EmailInputbox";
 import IconAvatars from "./IconAvatars";
-import { Button } from "@mui/material";
+import { Button, useMediaQuery, useTheme } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -68,15 +66,13 @@ export default function PrimarySearchAppBar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
-  const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
 
   const handleOpenDialog = () => {
     setIsDialogOpen(true);
@@ -140,35 +136,29 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error"></Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
+      <MenuItem sx={{ padding: 0 }}>
         <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
+          size="small"
+          aria-label="LinkedIn"
+          color="secondary"
+          href="https://www.linkedin.com/in/liko-chien-905b42293/"
+          target="linkedin"
         >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
+          <LinkedInIcon sx={{ color: "black", marginRight:1 }} />
+          LinkedIn
         </IconButton>
-        <p>Notifications</p>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      <MenuItem sx={{ padding: 0}}>
         <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
+          size="small"
+          edge="end"
+          aria-label="Github"
+          color="secondary"
+          href="https://github.com/debfw?tab=overview&from=2024-03-01&to=2024-03-10"
         >
-          <AccountCircle />
+          <GitHubIcon sx={{ color: "black" , marginRight:1}} />
+          GitHub
         </IconButton>
-        <p>Profile</p>
       </MenuItem>
     </Menu>
   );
@@ -186,19 +176,30 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Box sx={{ position: "absolute", left: -80, top: 10 }}>
-            {" "}
-            {showAvatars ? <IconAvatars /> : null}
-          </Box>
+          {isSmallScreen ? (
+            <Box sx={{ position: "absolute", left: 0, bottom: 60 }}>
+              {" "}
+              {showAvatars ? <IconAvatars /> : null}
+            </Box>
+          ) : (
+            <Box sx={{ position: "absolute", left: -80, top: 10 }}>
+              {" "}
+              {showAvatars ? <IconAvatars /> : null}
+            </Box>
+          )}
 
           <Button
             variant="contained"
             component="a"
             href="/resume.pdf"
             download="resume.pdf"
-            sx={{ backgroundColor: "white", color: "black" }}
+            sx={{
+              backgroundColor: "white",
+              color: "black",
+              margin: 1,
+            }}
           >
-            Download My Resume
+            {isSmallScreen ? <DownloadIcon /> : "Download My Resume"}
           </Button>
 
           <Search>

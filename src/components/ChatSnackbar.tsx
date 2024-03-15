@@ -10,7 +10,6 @@ export default function ChatSnackbar() {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value);
   };
-
   const fetchData = async () => {
     try {
       const response = await fetch("/api/openai", {
@@ -48,7 +47,7 @@ export default function ChatSnackbar() {
         sx={{
           display: "flex",
           alignItems: "baseline",
-          justifyContent: "space-evenly",
+          justifyContent: "start",
         }}
       >
         <TextField
@@ -57,13 +56,13 @@ export default function ChatSnackbar() {
           variant="outlined"
           value={inputValue}
           onChange={handleChange}
-          sx={{ marginTop: "20px", width: 500 }}
+          sx={{ marginTop: "20px"}}
         />
         <Button
           color="primary"
           variant="contained"
           onClick={fetchData}
-          sx={{ backgroundColor: "black" }}
+          sx={{ backgroundColor: "black", marginLeft:3 }}
         >
           Send
         </Button>
@@ -74,11 +73,7 @@ export default function ChatSnackbar() {
           src="/155625133.png"
           sx={{ width: 56, height: 56, marginRight: 1 }}
         />
-        <SnackbarContent message={response ? response : "Awaiting input..."}
-        sx={{
-        width: '100%',
-        maxWidth: '800px', 
-      }} />
+        <SnackbarContent message={response ? response : "Awaiting input..."} />
       </Box>{" "}
     </Stack>
   );

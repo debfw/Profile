@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 export default function ProfileCard() {
   const { t } = useTranslation();
   return (
-    <Card sx={{ maxWidth: 645 }}>
+    <Card >
       <CardActionArea>
         <CardContent>
           <Box sx={{ display: "flex", flexDirection: "row" , justifyContent:'space-between'}}>

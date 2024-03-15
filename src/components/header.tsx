@@ -15,15 +15,15 @@ export default function Header() {
           noWrap
           sx={{ flex: 1 }}
         >
-          Liko Chien
+          About Me
         </Typography>
         {/* <MaterialUISwitch /> */}
       </Toolbar>
       <Toolbar
         component="nav"
         variant="dense"
-        sx={{ justifyContent: "space-between", overflowX: "auto" }}
-      ></Toolbar>
+        sx={{ justifyContent: "center", overflowX: "auto" }}
+      >Choose Your Focus{" "}</Toolbar>
     </React.Fragment>
   );
 }

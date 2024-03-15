@@ -49,7 +49,7 @@ export default function ExperienceCard() {
   }) as string[];
 
   return (
-    <Card sx={{ maxWidth: 600 }}>
+    <Card sx={{ maxWidth: 500 }}>
       <CardHeader
         action={
           <IconButton
