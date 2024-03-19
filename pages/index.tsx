@@ -9,132 +9,109 @@ import PortFolioCard from "../src/components/Portfolio";
 import SkillSetCard from "../src/components/Skillsets";
 import ChatSnackbar from "../src/components/ChatSnackbar";
 import StickyHeader from "../src/components/stickyHeader";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import IconAvatars from "../src/components/IconAvatars";
+import { useContext } from "react";
 
 function HomePage() {
-  const [flipAnimation, setFlipAnimation] = useState(false);
+  // const [flipAnimation, setFlipAnimation] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const bottom =
-        Math.ceil(window.innerHeight + window.scrollY) >=
-        document.documentElement.scrollHeight;
-      console.log(bottom);
-      if (bottom) {
-        setFlipAnimation(true);
-        setTimeout(() => setFlipAnimation(false), 1500);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const bottom =
+  //       Math.ceil(window.innerHeight + window.scrollY) >=
+  //       document.documentElement.scrollHeight;
+  //     console.log(bottom);
+  //     if (bottom) {
+  //       setFlipAnimation(true);
+  //       // setTimeout(() => setFlipAnimation(false), 5500);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
   const {
+    isSnackbarVisible,
     isExperienceVisible,
     isPortfolioVisible,
     isSkillSetVisible,
-    isSnackbarVisible,
     toggleSnackbarVisibility,
   } = useCardContext();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const seeTools = (
-    <Box
-      sx={{
-        width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        gap: "20px",
-        marginTop: "20px",
-      }}
-    >
-      <Box sx={{ flex: 1, maxWidth: "300px" }}>
-        {isExperienceVisible && <ExperienceCard />}
+  const mainDisplay = isSmallScreen ? (
+    <>
+      <Box sx={{ margin: 1 }}>
+        <StickyHeader />
       </Box>
-      <Box sx={{ flex: 1, maxWidth: "300px" }}>
-        {isPortfolioVisible && <PortFolioCard />}
+      <Box
+        sx={{
+          marginRight: 1,
+          position: "fixed",
+          zIndex: 100,
+          bottom: 20,
+          right: 2,
+          background: "linear-gradient(155deg, black, transparent)",
+        }}
+      >
+        <Button
+          onClick={toggleSnackbarVisibility}
+          sx={{ display: "flex", flexDirection: "column" }}
+        >
+          {isSnackbarVisible ? (
+            <Box sx={{ color: "white", fontSize: 40, padding: 2 }}>X</Box>
+          ) : (
+            <Box sx={{ color: "white", fontSize: 40, padding: 2 }}>CHAT</Box>
+          )}
+        </Button>
+        {isSnackbarVisible && <ChatSnackbar />}
       </Box>
-      <Box sx={{ flex: 1, maxWidth: "300px" }}>
-        {isSkillSetVisible && <SkillSetCard />}
+    </>
+  ) : (
+    <>
+      <StickyHeader />
+      <Box
+        sx={{
+          marginRight: 1,
+          position: "fixed",
+          zIndex: 100,
+          bottom: 100,
+          right: 2,
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Button
+          onClick={toggleSnackbarVisibility}
+          sx={{ display: "flex", flexDirection: "column" }}
+        >
+          <Avatar
+            alt="Liko"
+            src="/155625133.png"
+            sx={{ width: "20%", height: "20%" }}
+          />
+          {isSnackbarVisible ? (
+            <Box sx={{ color: "black", fontSize: 40, padding: 2 }}>CLOSE</Box>
+          ) : (
+            <Box sx={{ color: "black", fontSize: 40, padding: 2 }}>CHAT</Box>
+          )}
+        </Button>
+        {isSnackbarVisible && <ChatSnackbar />}
       </Box>
-    </Box>
+    </>
   );
-
   return (
-    <Box sx={{ marginTop: "100px", width: "-webkit-fill-available" }}>
-      {isSmallScreen ? (
-        <>
-          <Box sx={{ margin: 1 }}>
-            <StickyHeader />
-          </Box>
-          <Box
-            sx={{
-              marginRight: 1,
-              position: "fixed",
-              zIndex: 100,
-              bottom: 20,
-              right: 2,
-              background: "linear-gradient(155deg, black, transparent)",
-            }}
-          >
-            <Button
-              onClick={toggleSnackbarVisibility}
-              sx={{ display: "flex", flexDirection: "column" }}
-            >
-              {isSnackbarVisible ? (
-                <Box sx={{ color: "white", fontSize: 40, padding: 2 }}>X</Box>
-              ) : (
-                <Box sx={{ color: "white", fontSize: 40, padding: 2 }}>
-                  CHAT
-                </Box>
-              )}
-            </Button>
-            {isSnackbarVisible && <ChatSnackbar />}
-          </Box>
-          <div
-            className={`page-flip-container ${
-              flipAnimation ? "animate-flip" : ""
-            }`}
-          >
-            {<h1>Hi</h1>}
-          </div>
-        </>
-      ) : (
-        <>
-          <StickyHeader />
-          <Box
-            sx={{
-              marginRight: 1,
-              position: "fixed",
-              zIndex: 100,
-              bottom: 100,
-              right: 2,
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Button
-              onClick={toggleSnackbarVisibility}
-              sx={{ display: "flex", flexDirection: "column" }}
-            >
-              <Avatar
-                alt="Liko"
-                src="/155625133.png"
-                sx={{ width: "20%", height: "20%" }}
-              />
-              {isSnackbarVisible ? (
-                <Box sx={{ color: "black", fontSize: 40, padding: 2 }}>
-                  CLOSE
-                </Box>
-              ) : (
-                <Box sx={{ color: "black", fontSize: 40, padding: 2 }}>
-                  CHAT
-                </Box>
-              )}
-            </Button>
-            {isSnackbarVisible && <ChatSnackbar />}
-          </Box>
-        </>
-      )}
+    <Box sx={{ width: "-webkit-fill-available" }}>
+      <Box sx={{ position: "fixed", top: 50 }}>
+        <IconAvatars />
+      </Box>
+      <Box sx={{ position: "fixed", top: 50, left:100 }}>
+      {isExperienceVisible && <ExperienceCard />}
+      {isPortfolioVisible && <PortFolioCard />}
+      {isSkillSetVisible && <SkillSetCard />}
+      </Box>
+      {mainDisplay}
+    
     </Box>
   );
 }

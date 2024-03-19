@@ -11,7 +11,7 @@ export default function PortFolioCard() {
   const { togglePortfolioVisibility } = useCardContext();
 
   return (
-    <Card sx={{ maxWidth: 645 }}>
+    <Card sx={{ maxWidth: 545,marginBottom:3 }}>
       <CardActionArea>
         <CardContent>
           <Box

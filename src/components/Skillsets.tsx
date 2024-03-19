@@ -11,7 +11,7 @@ export default function SkillSetCard() {
   const { toggleSkillSetVisibility } = useCardContext();
 
   return (
-    <Card sx={{ maxWidth: 645 }}>
+    <Card sx={{ maxWidth: 545, marginBottom: 3 }}>
       <CardActionArea>
         <CardContent>
           <Box

@@ -29,8 +29,7 @@ export default function StickyHeader() {
           <Typography variant="h5" component="h2" gutterBottom>
             {t("summary.experience")}
           </Typography>
-          <Typography variant="body1"> {t("email")}</Typography>
-          <Typography variant="body1"> {t("linkedin")}</Typography>
+       
         </Container>
         <Box
           component="footer"

@@ -12,19 +12,19 @@ export default function IconAvatars() {
   const { toggleExperienceVisibility, togglePortfolioVisibility, toggleSkillSetVisibility } =
     useCardContext();
   return (
-    <Stack direction="column" spacing={0} width={100}>
+    <Stack spacing={0} width={100}>
       <Button onClick={toggleSkillSetVisibility}>
-        <Avatar>
+        <Avatar sx={{ bgcolor: 'lightgrey' }}>
           <CategoryIcon />
         </Avatar>
       </Button>
-      <Button sx={{ alignSelf: "start" }} onClick={toggleExperienceVisibility}>
-        <Avatar sx={{ bgcolor: pink[500] }}>
+      <Button onClick={toggleExperienceVisibility}>
+        <Avatar sx={{ bgcolor: 'lightgrey' }}>
           <SchoolIcon />
         </Avatar>
       </Button>
       <Button onClick={togglePortfolioVisibility}>
-        <Avatar sx={{ bgcolor: green[500] }}>
+        <Avatar sx={{ bgcolor: 'lightgrey' }}>
           <AssignmentIcon />
         </Avatar>
       </Button>

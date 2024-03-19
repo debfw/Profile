@@ -49,7 +49,7 @@ export default function ExperienceCard() {
   }) as string[];
 
   return (
-    <Card sx={{ maxWidth: 500 }}>
+    <Card sx={{ maxWidth: 545, marginBottom:3 }}>
       <CardHeader
         action={
           <IconButton
@@ -62,13 +62,13 @@ export default function ExperienceCard() {
         title={t("experience.current.company")}
         subheader={t("experience.current.title")}
       />
-      <CardMedia
+      {/* <CardMedia
         component="img"
         height="194"
         image="/optoma.png"
         alt="optoma"
         sx={{ padding: 1 }}
-      />
+      /> */}
       <CardContent>
         <div>
           {firstHalf.map((responsibility, index) => (
