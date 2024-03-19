@@ -38,5 +38,18 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #e7dcdc;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(340deg);
+  }
+}
+
+.animate-flip {
+  animation: flip 1.5s forwards;
 }
