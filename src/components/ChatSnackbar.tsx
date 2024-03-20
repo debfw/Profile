@@ -56,13 +56,12 @@ export default function ChatSnackbar() {
           variant="outlined"
           value={inputValue}
           onChange={handleChange}
-          sx={{ marginTop: "20px"}}
         />
         <Button
           color="primary"
           variant="contained"
           onClick={fetchData}
-          sx={{ backgroundColor: "black", marginLeft:3 }}
+          sx={{ backgroundColor: "black", marginLeft: 3 }}
         >
           Send
         </Button>

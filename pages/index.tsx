@@ -1,4 +1,3 @@
-// Import necessary libraries and components
 import { Avatar, Box, Button, useMediaQuery, useTheme } from "@mui/material";
 import PrimarySearchAppBar from "../src/components/PrimarySearchAppBar";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
@@ -11,25 +10,25 @@ import ChatSnackbar from "../src/components/ChatSnackbar";
 import StickyHeader from "../src/components/stickyHeader";
 // import { useEffect, useState } from "react";
 import IconAvatars from "../src/components/IconAvatars";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 
 function HomePage() {
-  // const [flipAnimation, setFlipAnimation] = useState(false);
+  const [flipAnimation, setFlipAnimation] = useState(false);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const bottom =
-  //       Math.ceil(window.innerHeight + window.scrollY) >=
-  //       document.documentElement.scrollHeight;
-  //     console.log(bottom);
-  //     if (bottom) {
-  //       setFlipAnimation(true);
-  //       // setTimeout(() => setFlipAnimation(false), 5500);
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      const bottom =
+        Math.ceil(window.innerHeight + window.scrollY) >=
+        document.documentElement.scrollHeight;
+      console.log(bottom);
+      if (bottom) {
+        setFlipAnimation(true);
+        // setTimeout(() => setFlipAnimation(false), 5500);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const {
     isSnackbarVisible,
     isExperienceVisible,
@@ -51,7 +50,8 @@ function HomePage() {
           zIndex: 100,
           bottom: 20,
           right: 2,
-          background: "linear-gradient(155deg, black, transparent)",
+          background: "white",
+          width: "-webkit-fill-available",
         }}
       >
         <Button
@@ -59,13 +59,19 @@ function HomePage() {
           sx={{ display: "flex", flexDirection: "column" }}
         >
           {isSnackbarVisible ? (
-            <Box sx={{ color: "white", fontSize: 40, padding: 2 }}>X</Box>
+            <Box sx={{ color: "black", fontSize: 20 }}>X</Box>
           ) : (
-            <Box sx={{ color: "white", fontSize: 40, padding: 2 }}>CHAT</Box>
+            <Box sx={{ color: "black", fontSize: 20, padding: 2 }}>
+              CHAT WITH ME
+            </Box>
           )}
         </Button>
         {isSnackbarVisible && <ChatSnackbar />}
       </Box>
+      <ExperienceCard />
+      <SkillSetCard />
+      <PortFolioCard />
+      <Box sx={{margin:20}}></Box>
     </>
   ) : (
     <>
@@ -102,16 +108,18 @@ function HomePage() {
   );
   return (
     <Box sx={{ width: "-webkit-fill-available" }}>
-      <Box sx={{ position: "fixed", top: 50 }}>
-        <IconAvatars />
-      </Box>
-      <Box sx={{ position: "fixed", top: 50, left:100 }}>
-      {isExperienceVisible && <ExperienceCard />}
-      {isPortfolioVisible && <PortFolioCard />}
-      {isSkillSetVisible && <SkillSetCard />}
+      {isSmallScreen ? null : (
+        <Box sx={{ position: "fixed", top: 50 }}>
+          <IconAvatars />
+        </Box>
+      )}
+
+      <Box sx={{ position: "fixed", top: 50, left: 100 }}>
+        {isExperienceVisible && <ExperienceCard />}
+        {isPortfolioVisible && <PortFolioCard />}
+        {isSkillSetVisible && <SkillSetCard />}
       </Box>
       {mainDisplay}
-    
     </Box>
   );
 }

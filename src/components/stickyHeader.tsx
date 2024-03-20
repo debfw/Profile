@@ -4,10 +4,8 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "next-i18next";
 
-// TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
 export default function StickyHeader() {
@@ -23,13 +21,10 @@ export default function StickyHeader() {
       >
         <CssBaseline />
         <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
-          <Typography variant="h2" component="h1" gutterBottom>
-            {t("summary.focus")}
-          </Typography>
-          <Typography variant="h5" component="h2" gutterBottom>
-            {t("summary.experience")}
-          </Typography>
-       
+          <Trans i18nKey="helpLocize" t={t}>
+            <Typography variant="h2">{t("summary.focus")}</Typography>
+            <Typography variant="h5">{t("summary.experience")}</Typography>
+          </Trans>
         </Container>
         <Box
           component="footer"
@@ -44,7 +39,8 @@ export default function StickyHeader() {
           }}
         >
           <Container maxWidth="sm">
-            <Typography variant="body1">{t("name")} <Typography variant="h5">{t("title")}</Typography></Typography>
+            <Typography variant="body1">{t("name")}</Typography>
+            <Typography variant="h5">{t("title")}</Typography>
           </Container>
         </Box>
       </Box>
