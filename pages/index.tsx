@@ -1,5 +1,4 @@
 import { Avatar, Box, Button, useMediaQuery, useTheme } from "@mui/material";
-import PrimarySearchAppBar from "../src/components/PrimarySearchAppBar";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps } from "next";
 import { useCardContext } from "../src/contexts/CardContext";
@@ -8,9 +7,8 @@ import PortFolioCard from "../src/components/Portfolio";
 import SkillSetCard from "../src/components/Skillsets";
 import ChatSnackbar from "../src/components/ChatSnackbar";
 import StickyHeader from "../src/components/stickyHeader";
-// import { useEffect, useState } from "react";
 import IconAvatars from "../src/components/IconAvatars";
-import { useContext, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 
 function HomePage() {
   const [flipAnimation, setFlipAnimation] = useState(false);
