@@ -1,55 +1,67 @@
 {
-   
-    "naam": "Liko Chien",
-    "title": "Frontend-ontwikkelaar",
-    "location": "Londen, Verenigd Koninkrijk",
-    "contact": "+44 20 8638 5722",
-    "e-mail": "clwork1324@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
-    "samenvatting": {
-        "ervaring": "3 jaar ervaring met frontend-ontwikkeling, gespecialiseerd in React, TypeScript, Next.js en Redux-ecosysteem",
-        "focus": "Gericht op het optimaliseren van processen, het beveiligen van platforms en het vergroten van de gebruikersbetrokkenheid door middel van strategische ontwikkeling en innovatieve oplossingen"
+  "name": "Liko Chien",
+  "title": "Frontend Developer",
+  "location": "London, United Kingdom",
+  "contact": "+44 7873 635073 | clwork1324@gmail.com | London, UK",
+  "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
+  "summary": {
+    "experience": "3 years of experience in frontend development, specializing in React, TypeScript, Next.js, and the Redux ecosystem",
+    "focus": "Focused on optimizing processes, securing platforms, and increasing user engagement through strategic development and innovative solutions"
+  },
+  "experience": {
+    "current": {
+      "title": "Senior Frontend Developer",
+      "company": "California Umbrella, Remote",
+      "period": "02/2024 - Present",
+      "responsibilities": [
+        "Optimized CI/CD pipeline with quality gates and linters, improving team efficiency",
+        "Reduced bundle size by 30% through code splitting and asset optimization",
+        "Improved application speed by identifying performance bottlenecks with analysis tools",
+        "Refactored Next.js B2B CMS codebase, enhancing project maintainability",
+        "Used Sentry for error tracking, Istanbul for coverage, improving reliability and test quality",
+        "Streamlined API development with Swagger code generators for faster iterations",
+        "Created comprehensive documentation, facilitating effective collaboration between teams",
+        "Implemented hybrid rendering, improving responsiveness and synchronizing client-server states with SSR and CSR",
+        "Integrated mock server CLI, enabling frontend-backend separation and accelerating parallel development workflows",
+        "Used Playwright for E2E testing, enhancing cross-browser compatibility and reducing QA time by 30%"
+      ]
     },
-    "ervaring": {
-        "huidig": {
-            "title": "Senior frontend-ontwikkelaar",
-            "bedrijf": "Optoma Technology, Verenigd Koninkrijk (op afstand)",
-            "periode": "Mei 2023 - heden",
-            "verantwoordelijkheden": [
-                "Verbeterde teamefficiëntie door kwaliteitspoorten en geavanceerde linters te implementeren in de GitLab CI/CD-pijplijn",
-                "Ontwikkelde op Next.js gebaseerde CMS- en OAM-oplossingen met i18n, met een impact op miljoenen mensen wereldwijd",
-                "CSP- en CSRF-beveiligingen geïmplementeerd om de veiligheid te verbeteren in een projectorplatform van $ 300 miljoen, waardoor het bereik wordt uitgebreid naar 159 landen",
-                "30% bundelreductie bereikt en een algehele toename van 30% in vitale webstatistieken via codesplitsing, asset-optimalisatie en redux",
-                "Geïntegreerde Stripe API in CMS-oplossing voor veilige betalingstransacties",
-                "Ontwikkelde linters en leidde codebeoordelingen om de projectkwaliteit en naleving van normen te verbeteren",
-                "TypeScript geleerd om het SPA-project volledig te stabiliseren binnen de eerste week aan boord",
-                "De gebruikersbetrokkenheid met 25% verhoogd door een gestroomlijnde gebruikersinterface, gepersonaliseerde ervaringen en een volledig responsief ontwerp"
-            ]
-        },
-        "vorig": {
-            "title": "Frontend-ontwikkelaar",
-            "bedrijf": "Chia Sheng Real Estate, Taiwan (hybride)",
-            "periode": "januari 2021 - mei 2023",
-            "verantwoordelijkheden": [
-                "Leidde een Scrum-team en codebeoordeling, waarbij een leveringspercentage van 100% en verbeterde codekwaliteit in Jira Agile-workflows werd bereikt",
-                "De codebasis van een 4 jaar oud platform opnieuw vormgegeven met behulp van Material UI en Tailwind CSS, een volledig responsief webontwerp gerealiseerd",
-                "Met Figma en Bootstrap een intern managementsysteem ontwikkeld en ontworpen",
-                "Samengewerkt met backend om Zod-validaties en React Hook Form te implementeren, waardoor de data-integriteit en gebruikerservaring worden verbeterd",
-                "85% codedekking bereikt via unit- en integratietests met Jest en Cypress",
-                "Vereenvoudigde projectimplementatie via AWS Amplify, waardoor de operationele efficiëntie en projectschaalbaarheid worden vergroot",
-                "Gebruikt OAuth2 en JWT voor robuuste authenticatie en WebSocket-implementatie voor realtime interacties"
-            ]
-        }
+    "previous1": {
+      "title": "Senior Frontend Developer",
+      "company": "Optoma, Hybrid",
+      "period": "05/2023 - 02/2024",
+      "responsibilities": [
+        "Migrated from JavaScript to TypeScript, utilizing Zod-schema's to reduce type-related bugs by 75%",
+        "Reduced API errors by 60% through runtime validation and parsing",
+        "Developed Next.js CMS- and OAM-projects with internationalization features",
+        "Integrated Stripe payment gateway for secure transactions and subscription management",
+        "Optimized API performance through caching and request optimization, reducing load and improving responsiveness",
+        "Implemented accessibility enhancements for a user-friendly interface in various markets",
+        "Implemented extensive unit tests using the Jest framework",
+        "Reorganized unstructured styling using Tailwind CSS, accelerating UI development and reducing CSS by 40%",
+        "Developed E2E tests with Cypress, ensuring robust application behavior"
+      ]
     },
-    "vaardigheden": {
-        "talen_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-in-JS",
-        "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, API's (RESTful en GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
-    },
-    "onderwijs": {
-        "graad": "Master of Arts (M.A.)",
-        "major": "Jazzmuziekcompositie",
-        "universiteit": "Dong Hwa Universiteit, Taiwan",
-        "periode": "augustus 2017 - augustus 2018"
+    "previous2": {
+      "title": "Junior Frontend Developer",
+      "company": "Tech Innovations, Taiwan",
+      "period": "06/2020 - 12/2020",
+      "responsibilities": [
+        "Assisted in developing user interfaces with React and Redux",
+        "Participated in daily stand-ups and sprint planning meetings",
+        "Collaborated with backend developers to integrate RESTful APIs",
+        "Contributed to code reviews and maintained documentation"
+      ]
     }
-
+  },
+  "skills": {
+    "languages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
+    "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, APIs (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
+  },
+  "education": {
+    "university": "Taiwan National University of Arts, Taiwan",
+    "degree": "Master Degree",
+    "major": "Music Composition",
+    "period": "07/2018"
+  }
 }

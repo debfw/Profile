@@ -23,16 +23,21 @@ export default function EmailInputbox() {
   const [message, setMessage] = React.useState("");
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
-    const response = await fetch("/api/sendEmail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ senderEmail: email, message: message }),
-    });
-    const data = await response.json();
-    console.log(data);
-    console.log(email, message);
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ senderEmail: email, message: message }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
   };
 
   return (
@@ -68,9 +73,9 @@ export default function EmailInputbox() {
           }}
         />
         <MyFormHelperText />
-        <Box sx={{ display: "flex", justifyContent: "end" , marginTop:1}}>
-          <Button onClick={handleSubmit}   sx={{ color: 'black' }}>
-            Send mail    <SendIcon sx={{marginLeft:1}}/>
+        <Box sx={{ display: "flex", justifyContent: "end", marginTop: 1 }}>
+          <Button onClick={handleSubmit} sx={{ color: "black" }}>
+            Send mail <SendIcon sx={{ marginLeft: 1 }} />
           </Button>
         </Box>
       </FormControl>

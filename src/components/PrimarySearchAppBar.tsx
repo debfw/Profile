@@ -17,9 +17,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import List from "@mui/material/List";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
-import EmailInputbox from "./EmailInputbox";
 import IconAvatars from "./IconAvatars";
 import { Button, useMediaQuery, useTheme } from "@mui/material";
+import EmailInputbox from "./emailInputbox";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -144,11 +144,11 @@ export default function PrimarySearchAppBar() {
           href="https://www.linkedin.com/in/liko-chien-905b42293/"
           target="linkedin"
         >
-          <LinkedInIcon sx={{ color: "black", marginRight:1 }} />
+          <LinkedInIcon sx={{ color: "black", marginRight: 1 }} />
           LinkedIn
         </IconButton>
       </MenuItem>
-      <MenuItem sx={{ padding: 0}}>
+      <MenuItem sx={{ padding: 0 }}>
         <IconButton
           size="small"
           edge="end"
@@ -156,7 +156,7 @@ export default function PrimarySearchAppBar() {
           color="secondary"
           href="https://github.com/debfw?tab=overview&from=2024-03-01&to=2024-03-10"
         >
-          <GitHubIcon sx={{ color: "black" , marginRight:1}} />
+          <GitHubIcon sx={{ color: "black", marginRight: 1 }} />
           GitHub
         </IconButton>
       </MenuItem>

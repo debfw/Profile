@@ -1,55 +1,71 @@
 {
-   
-    "name": "Liko Chien",
-    "title": "Développeur Frontend",
-    "location": "Londres, Royaume-Uni",
-    "contact": "+44 20 8638 5722",
-    "email": "clwork1324@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
-    "résumé": {
-        "experience": "3 ans d'expérience en développement frontend, spécialisé dans l'écosystème React, TypeScript, Next.js et Redux",
-        "focus": "Axé sur l'optimisation des processus, la sécurisation des plateformes et l'amélioration de l'engagement des utilisateurs grâce au développement stratégique et à des solutions innovantes"
+  "name": "Liko Chien",
+  "title": "Développeur Frontend",
+  "location": "Londres, Royaume-Uni",
+  "contact": "+44 7873 635073 | clwork1324@gmail.com | Londres, Royaume-Uni",
+  "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
+  "resume": {
+    "experience": "3 ans d'expérience en développement frontend, spécialisé dans l'écosystème React, TypeScript, Next.js et Redux",
+    "focus": "Axé sur l'optimisation des processus, la sécurisation des plateformes et l'amélioration de l'engagement des utilisateurs grâce à un développement stratégique et des solutions innovantes"
+  },
+  "experience": {
+    "current": {
+      "title": "Développeur Frontend Senior",
+      "company": "California Umbrella, à distance",
+      "period": "02/2024 - Présent",
+      "responsibilities": [
+        "Optimisation du pipeline CI/CD avec des portes de qualité et des linters, améliorant l'efficacité de l'équipe",
+        "Réduction de la taille du bundle de 30 % grâce au découpage de code et à l'optimisation des ressources",
+        "Amélioration de la vitesse de l'application en identifiant les goulets d'étranglement de performance avec des outils d'analyse",
+        "Refactorisation du code de base CMS B2B Next.js, améliorant la maintenabilité du projet",
+        "Utilisation de Sentry pour le suivi des erreurs, Istanbul pour la couverture, améliorant la fiabilité et la qualité des tests",
+        "Rationalisation du développement API en utilisant des générateurs de code Swagger pour des itérations plus rapides",
+        "Création d'une documentation complète, facilitant la collaboration efficace entre les équipes",
+        "Mise en œuvre du rendu hybride, augmentant la réactivité et synchronisant les états client-serveur avec SSR et CSR",
+        "Intégration d'un serveur CLI fictif, permettant la séparation frontend-backend et accélérant les flux de travail de développement parallèle",
+        "Utilisation de Playwright pour les tests E2E, améliorant la compatibilité entre navigateurs et réduisant le temps de QA de 30 %"
+      ]
     },
-    "expérience": {
-        "actuel": {
-            "title": "Développeur Frontend Senior",
-            "société": "Optoma Technology, Royaume-Uni (à distance)",
-            "period": "Mai 2023 - Présent",
-            "responsabilités": [
-                "Amélioration de l'efficacité de l'équipe en implémentant des portes de qualité et des linters avancés dans le pipeline GitLab CI/CD",
-                "Développement de solutions CMS et OAM basées sur Next.js avec i18n, impactant des millions de personnes dans le monde",
-                "Mise en œuvre des protections CSP et CSRF pour améliorer la sécurité d'une plate-forme de projecteur de 300 millions de dollars, étendant sa portée à 159 pays",
-                "Réduction de 30 % du bundle et augmentation globale de 30 % des métriques Web Vital via le fractionnement de code, l'optimisation des actifs et Redux",
-                "API Stripe intégrée dans la solution CMS pour les transactions de paiement sécurisées",
-                "Développement de linters et conduite de revues de code pour améliorer la qualité des projets et le respect des standards",
-                "Appris TypeScript pour stabiliser complètement le projet SPA au cours de la première semaine d'intégration",
-                "Amélioration de l'engagement des utilisateurs de 25 % grâce à une interface utilisateur simplifiée, des expériences personnalisées et une conception entièrement réactive"
-            ]
-        },
-        "précédent": {
-            "title": "Développeur Frontend",
-            "société": "Chia Sheng Real Estate, Taiwan (Hybride)",
-            "period": "Janvier 2021 - mai 2023",
-            "responsabilités": [
-                "A dirigé une équipe Scrum et une révision de code, atteignant un taux de livraison de 100 % et une qualité de code améliorée dans les workflows Jira Agile",
-                "Refactorisation de la base de code d'une plateforme vieille de 4 ans à l'aide de Material UI et Tailwind CSS, réalisation d'une conception Web entièrement réactive",
-                "Développement et conception d'un système de gestion interne avec Figma et Bootstrap",
-                "Collaboration avec le backend pour implémenter les validations Zod et React Hook Form, améliorant ainsi l'intégrité des données et l'expérience utilisateur",
-                "Atteint une couverture de code de 85 % grâce à des tests unitaires et d'intégration avec Jest et Cypress",
-                "Déploiement de projet simplifié via AWS Amplify, améliorant l'efficacité opérationnelle et l'évolutivité du projet",
-                "Utilisation d'OAuth2 et JWT pour une authentification robuste et une implémentation WebSocket pour les interactions en temps réel"
-            ]
-        }
+    "previous": {
+      "title": "Développeur Frontend Senior",
+      "company": "Optoma, hybride",
+      "period": "05/2023 - 02/2024",
+      "responsibilities": [
+        "Migration de JavaScript vers TypeScript, utilisant des schémas Zod pour réduire les bugs liés aux types de 75 %",
+        "Réduction des erreurs API de 60 % grâce à la validation et au parsing en temps réel",
+        "Développement de projets CMS et OAM Next.js avec des fonctionnalités d'internationalisation",
+        "Intégration de la passerelle de paiement Stripe pour une gestion sécurisée des paiements et des abonnements",
+        "Optimisation des performances API grâce à la mise en cache et à l'optimisation des requêtes, réduisant la charge et améliorant la réponse",
+        "Mise en œuvre d'améliorations d'accessibilité pour une interface conviviale sur divers marchés",
+        "Mise en œuvre de tests unitaires complets utilisant le framework Jest",
+        "Reconstruction de styles désorganisés avec Tailwind CSS, accélérant le développement UI et réduisant le CSS de 40 %",
+        "Développement de tests E2E avec Cypress, garantissant un comportement robuste de l'application"
+      ]
     },
-    "compétences": {
-        "langages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
-        "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, API (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
-    },
-    "éducation": {
-        "degré": "Master of Arts (M.A.)",
-        "majeur": "Composition de musique jazz",
-        "university": "Université Dong Hwa, Taiwan",
-        "period": "Août 2017 - Août 2018"
+    "new": {
+      "title": "Développeur Frontend",
+      "company": "Bureau d'enregistrement foncier de Chia Sheng, Taïwan",
+      "period": "01/2021 - 05/2023",
+      "responsibilities": [
+        "Réalisation de revues de code et Scrum, améliorant la collaboration et la gestion de projet",
+        "Amélioration de la gestion des données avec React Hook Form, chargement dynamique et pagination",
+        "Collaboration avec des designers pour construire une plateforme réactive utilisant Figma et React Bootstrap",
+        "Mise en œuvre de React-Redux pour la gestion d'état, optimisant le flux de données et la réutilisabilité des composants",
+        "Mise en œuvre de Styled Components pour des styles complexes et dynamiques, améliorant la réutilisabilité et la maintenabilité",
+        "Utilisation de PurgeCSS pour supprimer les styles inutilisés, réduisant la taille du bundle CSS de 40 % et améliorant les temps de chargement",
+        "Amélioration de l'évolutivité avec AWS Amplify pour une infrastructure cloud robuste",
+        "Intégration d'OAuth2, JWT et WebSocket, renforçant la sécurité et l'engagement des utilisateurs"
+      ]
     }
-  
+  },
+  "skills": {
+    "languages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
+    "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, APIs (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
+  },
+  "education": {
+    "university": "Université nationale des arts de Taïwan, Taïwan",
+    "degree": "Master",
+    "major": "Composition musicale",
+    "period": "07/2018"
   }
+}

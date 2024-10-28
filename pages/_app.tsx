@@ -1,3 +1,6 @@
+"use client";
+import "../styles/app.css";
+
 import * as React from "react";
 import Head from "next/head";
 import { AppProps } from "next/app";
@@ -17,17 +20,9 @@ const MyApp = (props: AppProps) => {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Box
-          sx={{
-            display: "flex",
-            alignItem: "center",
-            justifyContent: "center",
-          }}
-        >
+        <Box className="centered-box">
           <CardProvider>
-            {" "}
             <Component {...pageProps} />
           </CardProvider>
         </Box>

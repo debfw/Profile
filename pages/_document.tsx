@@ -15,14 +15,13 @@ import {
 import theme, { nunito } from "../src/theme";
 
 export default function MyDocument(
-  props: DocumentProps & DocumentHeadTagsProps
+  props: DocumentProps & DocumentHeadTagsProps,
 ) {
   return (
     <Html lang="en" className={nunito.className}>
       <Head>
         <meta name="theme-color" content={theme.palette.primary.main} />
         <link rel="shortcut icon" href="/favicon.ico" />
-        
         <meta name="emotion-insertion-point" content="" />
         <DocumentHeadTags {...props} />
       </Head>

@@ -3,11 +3,7 @@
     "target": "ES2020",
     "types": ["node"],
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     /* Bundler mode */
@@ -27,12 +23,6 @@
     "incremental": true,
     "esModuleInterop": true
   },
-  "include": [
-    "src",
-    "src/i18n.config.ts",
-    "pages"
-, "pages/api/sendEmail.tsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src", "src/i18n.config.ts", "pages", "pages/api/sendEmail.tsx"],
+  "exclude": ["node_modules"]
 }

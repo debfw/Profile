@@ -1,55 +1,71 @@
 {
-   
-    "name": "Liko Chien",
-    "title": "Frontend Developer",
-    "location": "London, United Kingdom",
-    "contact": "+44 20 8638 5722",
-    "email": "clwork1324@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
-    "summary": {
-        "experience": "3 years of frontend development experience, specializing in React, TypeScript, Next.js, and Redux ecosystem",
-        "focus": "Focused on optimizing processes, securing platforms, and enhancing user engagement through strategic development and innovative solutions"
+  "name": "Liko Chien",
+  "title": "前端開發者",
+  "location": "倫敦，英國",
+  "contact": "+44 7873 635073 | clwork1324@gmail.com | 倫敦，英國",
+  "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
+  "summary": {
+    "experience": "3年前端開發經驗，專注於React、TypeScript、Next.js和Redux生態系統",
+    "focus": "專注於優化流程、保障平台安全，並通過戰略開發和創新解決方案提升用戶參與度"
+  },
+  "experience": {
+    "current": {
+      "title": "高級前端開發者",
+      "company": "加利福尼亞傘，遠程",
+      "period": "2024年2月 - 現在",
+      "responsibilities": [
+        "優化CI/CD管道，設置質量門和代碼檢查，提高團隊效率",
+        "通過代碼分割和資源優化減少30%的包體積",
+        "通過分析工具識別性能瓶頸，提高應用程序速度",
+        "重構Next.js B2B CMS代碼庫，提高項目可維護性",
+        "使用Sentry進行錯誤跟蹤，使用Istanbul進行覆蓋率檢查，提高可靠性和測試質量",
+        "使用Swagger代碼生成器簡化API開發，加快迭代速度",
+        "創建全面的文檔，促進有效的跨團隊協作",
+        "實施混合渲染，通過SSR和CSR提升響應性並同步客戶端-伺服器狀態",
+        "集成模擬伺服器CLI，實現前後端分離，加速並行開發工作流",
+        "使用Playwright進行端到端測試，提高跨瀏覽器兼容性，減少30%的QA時間"
+      ]
     },
-    "experience": {
-        "current": {
-            "title": "Senior Frontend Developer",
-            "company": "Optoma Technology, United Kingdom (Remote)",
-            "period": "May 2023 - Present",
-            "responsibilities": [
-                "Improved team efficiency by implementing quality gates and advanced linters in the GitLab CI/CD pipeline",
-                "Developed Next.js based CMS and OAM solutions with i18n, impacting millions globally",
-                "Implemented CSP and CSRF Protections to enhance security in a $300M projector platform, expanding its reach to 159 countries",
-                "Achieved 30% Bundle Reduction and an Overall 30% Increase in Web Vital Metrics via Code Splitting, Asset Optimization, and Redux",
-                "Integrated Stripe API into CMS Solution for Secure Payment Transactions",
-                "Developed linters and led code reviews to improve project quality and adherence to standards",
-                "Learned TypeScript to fully stabilize SPA project within the first onboard week",
-                "Boosted user engagement by 25% through streamlined UI, personalized experiences, and full responsive design"
-            ]
-        },
-        "previous": {
-            "title": "Frontend Developer",
-            "company": "Chia Sheng Real Estate, Taiwan (Hybrid)",
-            "period": "Jan 2021 - May 2023",
-            "responsibilities": [
-                "Led a Scrum team and code review, achieving a 100% delivery rate and enhanced code quality in Jira Agile workflows",
-                "Refactored a 4-year-old platform's codebase using Material UI and Tailwind CSS, achieved full responsive web design",
-                "Developed and designed an internal management system with Figma and Bootstrap",
-                "Collaborated with backend to implement Zod validations and React Hook Form, boosting data integrity and user experience",
-                "Achieved 85% code coverage through unit and integration testing with Jest and Cypress",
-                "Simplified project deployment through AWS Amplify, boosting operational efficiency and project scalability",
-                "Utilized OAuth2 and JWT for robust authentication and WebSocket implementation for real-time interactions"
-            ]
-        }
+    "previous": {
+      "title": "高級前端開發者",
+      "company": "奧圖碼，混合",
+      "period": "2023年5月 - 2024年2月",
+      "responsibilities": [
+        "將JavaScript遷移到TypeScript，使用Zod模式減少75%的類型相關錯誤",
+        "通過運行時驗證和解析減少60%的API錯誤",
+        "開發具有國際化功能的Next.js CMS和OAM項目",
+        "集成Stripe支付網關，實現安全結帳和訂閱管理",
+        "通過緩存和請求優化優化API性能，減少負載並提高響應速度",
+        "實施無障礙增強，確保用戶友好的界面適應多樣化市場",
+        "使用Jest框架實施全面的單元測試",
+        "使用Tailwind CSS重構雜亂的樣式，加速UI開發並減少40%的CSS",
+        "使用Cypress開發端到端測試，確保應用程序的健壯性"
+      ]
     },
-    "skills": {
-        "languages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
-        "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, APIs (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
-    },
-    "education": {
-        "degree": "Master of Arts (M.A.)",
-        "major": "Jazz Music Composition",
-        "university": "Dong Hwa University, Taiwan",
-        "period": "Aug 2017 - Aug 2018"
+    "previous2": {
+      "title": "前端開發者",
+      "company": "嘉盛地政事務所，台灣",
+      "period": "2021年1月 - 2023年5月",
+      "responsibilities": [
+        "執行Scrum和代碼審查，提升協作和項目管理",
+        "通過React Hook Form、動態加載和分頁優化數據處理",
+        "與設計師合作，使用Figma和React Bootstrap構建響應式平台",
+        "實施React-Redux進行狀態管理，優化數據流和組件重用性",
+        "使用Styled Components實現複雜的動態樣式，提高可重用性和可維護性",
+        "使用PurgeCSS清除未使用的樣式，減少40%的CSS包體積並提升加載速度",
+        "通過AWS Amplify增強可擴展性，提供穩定的雲端基礎設施",
+        "集成OAuth2、JWT和WebSocket，提高安全性和用戶參與度"
+      ]
     }
-
+  },
+  "skills": {
+    "languages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
+    "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, APIs (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
+  },
+  "education": {
+    "university": "台北藝術大學，台灣",
+    "degree": "碩士學位",
+    "major": "音樂創作",
+    "period": "2018年7月"
+  }
 }

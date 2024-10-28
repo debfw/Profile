@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+/* Logo Styles */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -18,6 +19,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Keyframes */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -25,20 +27,6 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #e7dcdc;
 }
 
 @keyframes flip {
@@ -50,6 +38,227 @@
   }
 }
 
+.centered-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Animations */
 .animate-flip {
   animation: flip 1.5s forwards;
+}
+
+/* Media Queries */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card Styles */
+.card {
+  padding: 2em;
+}
+
+/* Text Styles */
+.title {
+  font-size: 45px;
+  line-height: 0.5;
+  margin-top: 50px;
+}
+
+.subtitle {
+  font-size: 15px;
+}
+
+.footerText {
+  font-size: 13px;
+  text-align: right;
+  line-height: 1;
+  color: #4e524f;
+}
+.custom-avatar {
+  width: 15px;
+  color: white;
+}
+.summaryText {
+  font-size: 11px;
+  line-height: 1;
+}
+
+.summaryInnerText {
+  line-height: 1.2;
+}
+
+.desktop-chat-container {
+  margin-right: 1;
+  position: fixed;
+  bottom: 140;
+  right: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chat-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.small-screen-chat-container {
+  margin-right: 1;
+  position: fixed;
+  z-index: 100;
+  bottom: 20;
+  right: 2;
+  background: white;
+  width: -webkit-fill-available;
+}
+
+.chat-button-small {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-text {
+  color: black;
+  font-size: 20px;
+  padding: 2;
+}
+
+.chat-avatar {
+  width: 45px;
+  height: 45px;
+  margin-top: 1;
+}
+
+.small-screen-header {
+  margin: 1;
+}
+.experienceSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.contactText {
+  font-size: 11px;
+  line-height: 1;
+}
+
+/* Horizontal Rule */
+.hr {
+  height: 2px;
+  background: linear-gradient(to right, lightgrey, darkgrey, lightgrey);
+  border: none;
+  width: 60%;
+  text-align: right;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Layout Styles */
+.stickyHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContainer {
+  margin-top: 2rem; /* mt: 8 */
+  margin-bottom: 0.5rem; /* mb: 2 */
+}
+
+.footerContainer {
+  padding-top: 1rem; /* py: 3 */
+  padding-bottom: 1rem; /* py: 3 */
+  padding-left: 0.5rem; /* px: 2 */
+  padding-right: 0.5rem; /* px: 2 */
+  margin-top: auto; /* mt: "auto" */
+  background-color: var(--footer-background-color);
+}
+
+/* CSS Variables */
+:root {
+  --footer-background-color: lightgrey;
+}
+
+/* APP.css */
+.chatbox-card {
+  padding: 16px;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.input-container {
+  display: flex;
+  align-items: end;
+  gap: 16px; /* Adjust gap as needed */
+}
+
+.text-field {
+  flex-grow: 1;
+}
+
+.ask-button {
+  background-color: black;
+  height: 25px;
+  font-size: 10px;
+}
+
+.response-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.avatar {
+  width: 26px;
+  height: 26px;
+  margin-right: 8px;
+}
+
+.snackbar-content {
+  margin-bottom: 16px;
+}
+
+/* IconAvatars.css */
+.avatar {
+  background-color: lightgrey;
+}
+
+.chatbox-content {
+  height: auto;
+  background-color: #f0f0f0;
+  padding: 15px;
+}
+.input-container {
+  margin-top: 1.5rem;
+}
+.ask-button {
+  font-size: 10px;
+}
+
+.snackbar-button {
+  background-color: transparent;
+  border: 1px solid;
+  color: darkGrey;
+  white-space: nowrap;
+  width: fit-content;
+  font-size: 10px;
+  margin-top: 1;
 }

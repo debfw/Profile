@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   if (req?.method !== "POST") {
     return res.status(405).json({ message: "Method Not Allowed" });
@@ -20,7 +20,7 @@ export default async function handler(
 
   const sentFrom = new Sender(
     "noreply@trial-vywj2lpxmq147oqz.mlsender.net",
-    "From Your Profile website"
+    "From Your Profile website",
   );
   const recipients = [new Recipient(recipientEmail, "Liko")];
   const emailParams = new EmailParams()

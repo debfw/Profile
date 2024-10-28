@@ -1,55 +1,73 @@
 {
-   
-    "name": "Liko Chien",
-    "title": "Frontend Developer",
-    "location": "London, United Kingdom",
-    "contact": "+44 20 8638 5722",
-    "email": "clwork1324@gmail.com",
-    "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
-    "summary": {
-        "experience": "3 years of frontend development experience, specializing in React, TypeScript, Next.js, and Redux ecosystem",
-        "focus": "Focused on optimizing processes, securing platforms, and enhancing user engagement through strategic development and innovative solutions"
+  "name": "Liko Chien",
+  "title": "Frontend Developer",
+  "location": "London, United Kingdom",
+  "contact": "+44 7873 635073 | clwork1324@gmail.com | London, UK",
+  "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
+  "summary": {
+    "experience": "3 years of frontend development experience, specializing in React, TypeScript, Next.js, and Redux ecosystem",
+    "focus": "Focused on optimizing processes, enhancing user engagement through strategic development, and innovative solutions"
+  },
+  "experience": {
+    "current": {
+      "title": "Senior Frontend Developer",
+      "company": "California Umbrella, Remote",
+      "period": "02/2024 - Present",
+      "responsibilities": [
+        "Optimized CI/CD pipeline with quality gates and linters, improving team efficiency",
+        "Reduced bundle size 30% via code splitting and asset optimization",
+        "Enhanced application speed by identifying performance bottlenecks with analysis tools",
+        "Refactored Next.js B2B CMS codebase, improving project maintainability",
+        "Used Sentry for error tracking, Istanbul for coverage, enhancing reliability and test quality",
+        "Streamlined API development using Swagger code generators for faster iterations",
+        "Created comprehensive documentation, facilitating effective cross-team collaboration",
+        "Implemented hybrid rendering, boosting responsiveness and syncing client-server states with SSR and CSR",
+        "Integrated mock server CLI, enabling frontend-backend separation and accelerating parallel development workflows",
+        "Used Playwright for E2E testing, enhancing cross-browser compatibility and reducing QA time 30%"
+      ]
     },
-    "experience": {
-        "current": {
-            "title": "Senior Frontend Developer",
-            "company": "Optoma Technology, United Kingdom (Remote)",
-            "period": "May 2023 - Present",
-            "responsibilities": [
-                "Improved team efficiency by implementing quality gates and advanced linters in the GitLab CI/CD pipeline",
-                "Developed Next.js based CMS and OAM solutions with i18n, impacting millions globally",
-                "Implemented CSP and CSRF Protections to enhance security in a $300M projector platform, expanding its reach to 159 countries",
-                "Achieved 30% Bundle Reduction and an Overall 30% Increase in Web Vital Metrics via Code Splitting, Asset Optimization, and Redux",
-                "Integrated Stripe API into CMS Solution for Secure Payment Transactions",
-                "Developed linters and led code reviews to improve project quality and adherence to standards",
-                "Learned TypeScript to fully stabilize SPA project within the first onboard week",
-                "Boosted user engagement by 25% through streamlined UI, personalized experiences, and full responsive design"
-            ]
-        },
-        "previous": {
-            "title": "Frontend Developer",
-            "company": "Chia Sheng Real Estate, Taiwan (Hybrid)",
-            "period": "Jan 2021 - May 2023",
-            "responsibilities": [
-                "Led a Scrum team and code review, achieving a 100% delivery rate and enhanced code quality in Jira Agile workflows",
-                "Refactored a 4-year-old platform's codebase using Material UI and Tailwind CSS, achieved full responsive web design",
-                "Developed and designed an internal management system with Figma and Bootstrap",
-                "Collaborated with backend to implement Zod validations and React Hook Form, boosting data integrity and user experience",
-                "Achieved 85% code coverage through unit and integration testing with Jest and Cypress",
-                "Simplified project deployment through AWS Amplify, boosting operational efficiency and project scalability",
-                "Utilized OAuth2 and JWT for robust authentication and WebSocket implementation for real-time interactions"
-            ]
-        }
+    "previous1": {
+      "title": "Senior Frontend Developer",
+      "company": "Optoma, Hybrid",
+      "period": "05/2023 - 02/2024",
+      "responsibilities": [
+        "Migrated Javascript to Typescript, using Zod schemas to decrease type-related bugs 75%",
+        "Decreased API errors 60% through runtime validation and parsing",
+        "Developed Next.js CMS and OAM projects with internationalization features",
+        "Integrated Stripe payment gateway for secure checkout and subscription management",
+        "Optimized API performance via caching and request optimization, reducing load and improving response",
+        "Implemented accessibility enhancements for user-friendly interface across diverse markets",
+        "Implemented comprehensive unit tests using Jest framework",
+        "Reconstructed disorganized styling using Tailwind CSS, accelerating UI development and reducing CSS 40%",
+        "Developed E2E tests with Cypress, ensuring robust application behavior"
+      ]
     },
-    "skills": {
-        "languages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
-        "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, APIs (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
-    },
-    "education": {
-        "degree": "Master of Arts (M.A.)",
-        "major": "Jazz Music Composition",
-        "university": "Dong Hwa University, Taiwan",
-        "period": "Aug 2017 - Aug 2018"
+    "previous2": {
+      "title": "Frontend Developer",
+      "company": "Chia Sheng Land Registration Office, Taiwan",
+      "period": "01/2021 - 05/2023",
+      "responsibilities": [
+        "Conducted Scrum and code reviews, improving collaboration and project management",
+        "Improved data handling with React Hook Form, dynamic loading, and pagination",
+        "Collaborated with designers to build responsive platform using Figma and React Bootstrap",
+        "Implemented React-Redux for state management, optimizing data flow and component reusability",
+        "Implemented Styled Components for complex, dynamic styles, enhancing reusability and maintainability",
+        "Used PurgeCSS to eliminate unused styles, reducing CSS bundle size by 40% and improving load times",
+        "Enhanced scalability with AWS Amplify for robust cloud-based infrastructure",
+        "Integrated OAuth2, JWT, and WebSocket, boosting security and user engagement"
+      ]
     }
-
+  },
+  "skills": {
+    "languages_frameworks_title": "Languages & Frameworks",
+    "languages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
+    "tools_deployment_title": "Tools & Deployment",
+    "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, APIs (RESTful & GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
+  },
+  "education": {
+    "university": "Taiwan National University of Arts, Taiwan",
+    "degree": "Master Degree",
+    "major": "Music Composition",
+    "period": "07/2018"
+  }
 }

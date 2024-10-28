@@ -1,33 +1,61 @@
+"use client";
 import * as React from "react";
-import { green, pink } from "@mui/material/colors";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import SchoolIcon from "@mui/icons-material/School";
 import CategoryIcon from "@mui/icons-material/Category";
 import AssignmentIcon from "@mui/icons-material/Assignment";
-import { Button } from "@mui/material";
-import { useCardContext } from "../contexts/CardContext";
+import { Button, Tooltip } from "@mui/material";
+import SkillsDialog from "./skillsDialog";
 
 export default function IconAvatars() {
-  const { toggleExperienceVisibility, togglePortfolioVisibility, toggleSkillSetVisibility } =
-    useCardContext();
+  const [dialogOpen, setDialogOpen] = React.useState(false);
+
+  const handleClose = () => {
+    setDialogOpen(false);
+  };
+
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "Profile/public/Liko Chien Resume.pdf";
+    link.download = "Liko Chien Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleOpenSkillsDialog = () => {
+    setDialogOpen(true);
+  };
+
   return (
-    <Stack spacing={0} width={100}>
-      <Button onClick={toggleSkillSetVisibility}>
-        <Avatar sx={{ bgcolor: 'lightgrey' }}>
-          <CategoryIcon />
-        </Avatar>
-      </Button>
-      <Button onClick={toggleExperienceVisibility}>
-        <Avatar sx={{ bgcolor: 'lightgrey' }}>
-          <SchoolIcon />
-        </Avatar>
-      </Button>
-      <Button onClick={togglePortfolioVisibility}>
-        <Avatar sx={{ bgcolor: 'lightgrey' }}>
-          <AssignmentIcon />
-        </Avatar>
-      </Button>
+    <Stack spacing={0} width={80}>
+      <Tooltip title="Personal Projects" arrow>
+        <Button
+          onClick={() =>
+            window.open("https://github.com/debfw/E-commerce", "_blank")
+          }
+        >
+          <Avatar className="avatar custom-avatar">
+            <CategoryIcon />
+          </Avatar>
+        </Button>
+      </Tooltip>
+      <Tooltip title="Skillset" arrow>
+        <Button onClick={handleOpenSkillsDialog}>
+          <Avatar className="avatar custom-avatar">
+            <SchoolIcon />
+          </Avatar>
+        </Button>
+      </Tooltip>
+      <SkillsDialog open={dialogOpen} onClose={handleClose} />
+      <Tooltip title="Download My Resume" arrow>
+        <Button onClick={handleDownloadResume}>
+          <Avatar className="avatar custom-avatar">
+            <AssignmentIcon />
+          </Avatar>
+        </Button>
+      </Tooltip>
     </Stack>
   );
 }

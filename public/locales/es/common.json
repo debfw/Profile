@@ -1,0 +1,71 @@
+{
+  "name": "Liko Chien",
+  "title": "Desarrollador Frontend",
+  "location": "Londres, Reino Unido",
+  "contact": "+44 7873 635073 | clwork1324@gmail.com | Londres, Reino Unido",
+  "linkedin": "https://www.linkedin.com/in/liko-chien-905b42293/",
+  "summary": {
+    "experience": "3 años de experiencia en desarrollo frontend, especializado en React, TypeScript, Next.js y el ecosistema de Redux",
+    "focus": "Enfocado en optimizar procesos, asegurar plataformas y mejorar la participación del usuario a través del desarrollo estratégico y soluciones innovadoras"
+  },
+  "experience": {
+    "current": {
+      "title": "Desarrollador Frontend Senior",
+      "company": "California Umbrella, Remoto",
+      "period": "02/2024 - Presente",
+      "responsibilities": [
+        "Optimizó el pipeline de CI/CD con puertas de calidad y linters, mejorando la eficiencia del equipo",
+        "Redujo el tamaño del paquete en un 30% mediante la división de código y la optimización de activos",
+        "Mejoró la velocidad de la aplicación al identificar cuellos de botella de rendimiento con herramientas de análisis",
+        "Refactorizó la base de código del CMS B2B de Next.js, mejorando la mantenibilidad del proyecto",
+        "Usó Sentry para el seguimiento de errores, Istanbul para la cobertura, mejorando la fiabilidad y la calidad de las pruebas",
+        "Agilizó el desarrollo de API utilizando generadores de código Swagger para iteraciones más rápidas",
+        "Creó documentación integral, facilitando la colaboración efectiva entre equipos",
+        "Implementó renderizado híbrido, mejorando la capacidad de respuesta y sincronizando los estados cliente-servidor con SSR y CSR",
+        "Integró CLI de servidor simulado, permitiendo la separación frontend-backend y acelerando los flujos de trabajo de desarrollo paralelo",
+        "Usó Playwright para pruebas E2E, mejorando la compatibilidad entre navegadores y reduciendo el tiempo de QA en un 30%"
+      ]
+    },
+    "previous1": {
+      "title": "Desarrollador Frontend Senior",
+      "company": "Optoma, Híbrido",
+      "period": "05/2023 - 02/2024",
+      "responsibilities": [
+        "Migró Javascript a Typescript, utilizando esquemas de Zod para disminuir los errores relacionados con tipos en un 75%",
+        "Disminuyó los errores de API en un 60% a través de la validación y análisis en tiempo de ejecución",
+        "Desarrolló proyectos de CMS y OAM de Next.js con características de internacionalización",
+        "Integró la pasarela de pago Stripe para un proceso de pago seguro y gestión de suscripciones",
+        "Optimizó el rendimiento de la API mediante caché y optimización de solicitudes, reduciendo la carga y mejorando la respuesta",
+        "Implementó mejoras de accesibilidad para una interfaz fácil de usar en diversos mercados",
+        "Implementó pruebas unitarias integrales utilizando el marco Jest",
+        "Reestructuró el estilo desorganizado utilizando Tailwind CSS, acelerando el desarrollo de UI y reduciendo CSS en un 40%",
+        "Desarrolló pruebas E2E con Cypress, asegurando un comportamiento robusto de la aplicación"
+      ]
+    },
+    "previous2": {
+      "title": "Desarrollador Frontend",
+      "company": "Oficina de Registro de Tierras Chia Sheng, Taiwán",
+      "period": "01/2021 - 05/2023",
+      "responsibilities": [
+        "Realizó Scrum y revisiones de código, mejorando la colaboración y la gestión de proyectos",
+        "Mejoró el manejo de datos con React Hook Form, carga dinámica y paginación",
+        "Colaboró con diseñadores para construir una plataforma receptiva utilizando Figma y React Bootstrap",
+        "Implementó React-Redux para la gestión del estado, optimizando el flujo de datos y la reutilización de componentes",
+        "Implementó Styled Components para estilos complejos y dinámicos, mejorando la reutilización y mantenibilidad",
+        "Usó PurgeCSS para eliminar estilos no utilizados, reduciendo el tamaño del paquete CSS en un 40% y mejorando los tiempos de carga",
+        "Mejoró la escalabilidad con AWS Amplify para una infraestructura robusta basada en la nube",
+        "Integró OAuth2, JWT y WebSocket, mejorando la seguridad y la participación del usuario"
+      ]
+    }
+  },
+  "skills": {
+    "languages_frameworks": "HTML5, CSS3, JavaScript/TypeScript, React/Redux, Next.js, Python, MySQL, SASS/SCSS, Tailwind CSS, CSS-In-JS",
+    "tools_deployment": "Webpack, Gulp, Git, Gitlab CI/CD, APIs (RESTful y GraphQL), Jest, Jira, Cypress, Docker, Vite, Prettier, ESLint, npm"
+  },
+  "education": {
+    "university": "Universidad Nacional de Artes de Taiwán, Taiwán",
+    "degree": "Título de Maestría",
+    "major": "Composición Musical",
+    "period": "07/2018"
+  }
+}

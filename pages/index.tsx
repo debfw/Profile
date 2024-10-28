@@ -1,109 +1,86 @@
+"use client";
+
 import { Avatar, Box, Button, useMediaQuery, useTheme } from "@mui/material";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetStaticProps } from "next";
-import { useCardContext } from "../src/contexts/CardContext";
-import ExperienceCard from "../src/components/Experience";
-import PortFolioCard from "../src/components/Portfolio";
-import SkillSetCard from "../src/components/Skillsets";
-import ChatSnackbar from "../src/components/ChatSnackbar";
+
 import StickyHeader from "../src/components/stickyHeader";
 import IconAvatars from "../src/components/IconAvatars";
-import {  useEffect, useState } from "react";
+import { useState } from "react";
+import Chatbox from "../src/components/chatbot";
+import ExperienceSliders from "../src/components/experienceSliders";
 
 function HomePage() {
-  const [flipAnimation, setFlipAnimation] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const bottom =
-        Math.ceil(window.innerHeight + window.scrollY) >=
-        document.documentElement.scrollHeight;
-      console.log(bottom);
-      if (bottom) {
-        setFlipAnimation(true);
-        // setTimeout(() => setFlipAnimation(false), 5500);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-  const {
-    isSnackbarVisible,
-    isExperienceVisible,
-    isPortfolioVisible,
-    isSkillSetVisible,
-    toggleSnackbarVisibility,
-  } = useCardContext();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const mainDisplay = isSmallScreen ? (
-    <>
-      <Box sx={{ margin: 1 }}>
+  const openChat = () => {
+    return (
+      <p
+        style={{
+          color: "black",
+          fontSize: 10,
+          padding: 2,
+          textTransform: "none",
+        }}
+      >
+        CLOSE
+      </p>
+    );
+  };
+  const closeChat = () => {
+    return (
+      <svg width="100" height="30">
+        <defs>
+          <path id="curve" d="M 10 40 Q 50 10, 90 40" fill="transparent" />
+        </defs>
+        <text fill="black" fontSize="10">
+          <textPath href="#curve" startOffset="50%" textAnchor="middle">
+            ChatBot
+          </textPath>
+        </text>
+      </svg>
+    );
+  };
+  const DesktopDisplay = () => {
+    return (
+      <>
         <StickyHeader />
-      </Box>
-      <Box
-        sx={{
-          marginRight: 1,
-          position: "fixed",
-          zIndex: 100,
-          bottom: 20,
-          right: 2,
-          background: "white",
-          width: "-webkit-fill-available",
-        }}
-      >
-        <Button
-          onClick={toggleSnackbarVisibility}
-          sx={{ display: "flex", flexDirection: "column" }}
-        >
-          {isSnackbarVisible ? (
-            <Box sx={{ color: "black", fontSize: 20 }}>X</Box>
-          ) : (
-            <Box sx={{ color: "black", fontSize: 20, padding: 2 }}>
-              CHAT WITH ME
-            </Box>
-          )}
-        </Button>
-        {isSnackbarVisible && <ChatSnackbar />}
-      </Box>
-      <ExperienceCard />
-      <SkillSetCard />
-      <PortFolioCard />
-      <Box sx={{margin:20}}></Box>
-    </>
-  ) : (
-    <>
-      <StickyHeader />
-      <Box
-        sx={{
-          marginRight: 1,
-          position: "fixed",
-          zIndex: 100,
-          bottom: 100,
-          right: 2,
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Button
-          onClick={toggleSnackbarVisibility}
-          sx={{ display: "flex", flexDirection: "column" }}
-        >
-          <Avatar
-            alt="Liko"
-            src="/155625133.png"
-            sx={{ width: "20%", height: "20%" }}
-          />
-          {isSnackbarVisible ? (
-            <Box sx={{ color: "black", fontSize: 40, padding: 2 }}>CLOSE</Box>
-          ) : (
-            <Box sx={{ color: "black", fontSize: 40, padding: 2 }}>CHAT</Box>
-          )}
-        </Button>
-        {isSnackbarVisible && <ChatSnackbar />}
-      </Box>
-    </>
-  );
+        <Box className="desktop-chat-container">
+          <Button onClick={() => setIsChatOpen(true)} className="chat-button">
+            {isChatOpen ? openChat() : closeChat()}
+            <Avatar alt="Liko" src="/155625133.png" className="chat-avatar" />
+          </Button>
+
+          {isChatOpen && <Chatbox setIsChatOpen={setIsChatOpen} />}
+        </Box>
+      </>
+    );
+  };
+  const smallScreenDisplay = () => {
+    return (
+      <>
+        <Box className="small-screen-header">
+          <StickyHeader />
+        </Box>
+        <Box className="small-screen-chat-container">
+          <Button
+            onClick={() => setIsChatOpen(true)}
+            className="chat-button-small"
+          >
+            <Box className="chat-text">CHAT WITH ME</Box>
+          </Button>
+          <Chatbox setIsChatOpen={setIsChatOpen} />
+        </Box>
+        <ExperienceSliders />
+
+        <Box sx={{ margin: 20 }}></Box>
+      </>
+    );
+  };
+  const mainDisplay = isSmallScreen ? smallScreenDisplay() : DesktopDisplay();
+
   return (
     <Box sx={{ width: "-webkit-fill-available" }}>
       {isSmallScreen ? null : (
@@ -112,11 +89,7 @@ function HomePage() {
         </Box>
       )}
 
-      <Box sx={{ position: "fixed", top: 50, left: 100 }}>
-        {isExperienceVisible && <ExperienceCard />}
-        {isPortfolioVisible && <PortFolioCard />}
-        {isSkillSetVisible && <SkillSetCard />}
-      </Box>
+      <Box sx={{ position: "fixed", top: 50, left: 100 }}></Box>
       {mainDisplay}
     </Box>
   );
@@ -135,3 +108,53 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 };
 
 export default HomePage;
+
+// CSS classes to be defined in a separate CSS file
+/*
+.desktop-chat-container {
+  margin-right: 1;
+  position: fixed;
+  bottom: 140;
+  right: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chat-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-avatar {
+  width: 45px;
+  height: 45px;
+  margin-top: 1;
+}
+
+.small-screen-header {
+  margin: 1;
+}
+
+.small-screen-chat-container {
+  margin-right: 1;
+  position: fixed;
+  z-index: 100;
+  bottom: 20;
+  right: 2;
+  background: white;
+  width: -webkit-fill-available;
+}
+
+.chat-button-small {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-text {
+  color: black;
+  font-size: 20px;
+  padding: 2;
+}
+*/
