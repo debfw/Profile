@@ -16,5 +16,10 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "@typescript-eslint/no-unused-vars": "off",
+    "no-undef": "off",
+    "@typescript-eslint/no-require-imports": "off",
+  },
+  globals: {
+    module: "readonly",
   },
 };
