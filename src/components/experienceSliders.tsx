@@ -42,35 +42,49 @@ export default function ExperienceSliders() {
   const currentExperience = experiences[experienceKeys[currentIndex]];
 
   return (
-    <Box
-      sx={{
-        padding: 2,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        height: "100%",
-      }}
-      id="ExperienceCard"
-    >
-      <Typography variant="subtitle2" gutterBottom>
-        {t("experience.current.title")} - {t("experience.current.company")}
-      </Typography>
-      <Typography variant="caption" gutterBottom>
-        {t("experience.current.period")}
-      </Typography>
-      <Typography variant="caption">Responsibilities:</Typography>
-      <ul>
-        {currentExperience.responsibilities.map((responsibilities, index) => {
-          return (
-            <li key={index}>
-              <Typography variant="caption">{responsibilities}</Typography>
-            </li>
-          );
-        })}
-      </ul>
-      <IconButton onClick={handleSlide}>
+    <>
+      <Box
+        sx={{
+          padding: 2,
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height: "100%",
+        }}
+        id="ExperienceCard"
+      >
+        <>
+          <Box sx={{ flexGrow: 1 }}>
+            <Typography variant="subtitle2" gutterBottom>
+              {t("experience.current.title")} -{" "}
+              {t("experience.current.company")}
+            </Typography>
+            <Typography variant="caption" gutterBottom>
+              {t("experience.current.period")}
+            </Typography>
+            <Typography variant="caption">Responsibilities:</Typography>
+            <ul>
+              {currentExperience.responsibilities.map(
+                (responsibilities, index) => {
+                  return (
+                    <li key={index}>
+                      <Typography variant="caption">
+                        {responsibilities}
+                      </Typography>
+                    </li>
+                  );
+                },
+              )}
+            </ul>
+          </Box>
+        </>
+      </Box>
+      <IconButton
+        onClick={handleSlide}
+        style={{ position: "relative", top: 30 }}
+      >
         <SlideIcon />
       </IconButton>
-    </Box>
+    </>
   );
 }

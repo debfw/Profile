@@ -47,13 +47,15 @@ function HomePage() {
     return (
       <>
         <StickyHeader />
-        <Box className="desktop-chat-container">
+        <Box
+          className="desktop-chat-container"
+          style={{ position: "absolute", right: 10, top: 500 }}
+        >
           <Button onClick={() => setIsChatOpen(true)} className="chat-button">
             {isChatOpen ? openChat() : closeChat()}
             <Avatar alt="Liko" src="/155625133.png" className="chat-avatar" />
           </Button>
-
-          {isChatOpen && <Chatbox setIsChatOpen={setIsChatOpen} />}
+          {isChatOpen ? <Chatbox setIsChatOpen={setIsChatOpen} /> : null}
         </Box>
       </>
     );
@@ -71,10 +73,8 @@ function HomePage() {
           >
             <Box className="chat-text">CHAT WITH ME</Box>
           </Button>
-          <Chatbox setIsChatOpen={setIsChatOpen} />
+          {isChatOpen ? <Chatbox setIsChatOpen={setIsChatOpen} /> : null}
         </Box>
-        <ExperienceSliders />
-
         <Box sx={{ margin: 20 }}></Box>
       </>
     );
@@ -108,53 +108,3 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 };
 
 export default HomePage;
-
-// CSS classes to be defined in a separate CSS file
-/*
-.desktop-chat-container {
-  margin-right: 1;
-  position: fixed;
-  bottom: 140;
-  right: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.chat-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.chat-avatar {
-  width: 45px;
-  height: 45px;
-  margin-top: 1;
-}
-
-.small-screen-header {
-  margin: 1;
-}
-
-.small-screen-chat-container {
-  margin-right: 1;
-  position: fixed;
-  z-index: 100;
-  bottom: 20;
-  right: 2;
-  background: white;
-  width: -webkit-fill-available;
-}
-
-.chat-button-small {
-  display: flex;
-  flex-direction: column;
-}
-
-.chat-text {
-  color: black;
-  font-size: 20px;
-  padding: 2;
-}
-*/

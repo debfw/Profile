@@ -24,6 +24,7 @@ export default function Chatbox({ setIsChatOpen }: ChatBoxType) {
   ) => {
     setInputValue(event.target.value);
   };
+
   const getChatGptReplied = async () => {
     try {
       const response = await fetch("/api/openai", {
@@ -45,11 +46,15 @@ export default function Chatbox({ setIsChatOpen }: ChatBoxType) {
     }
   };
 
+  const handleClose = () => {
+    setIsChatOpen(false);
+  };
+
   return (
-    <Dialog open={true} maxWidth="sm" fullWidth>
+    <Dialog open={true} maxWidth="sm" fullWidth id="chatDialog">
       <Card className="chatbox-card">
         <IconButton
-          onClick={() => setIsChatOpen(false)}
+          onClick={handleClose}
           aria-label="close"
           className="close-button"
         >

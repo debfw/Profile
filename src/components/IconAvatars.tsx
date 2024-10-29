@@ -36,23 +36,23 @@ export default function IconAvatars() {
             window.open("https://github.com/debfw/E-commerce", "_blank")
           }
         >
-          <Avatar className="avatar custom-avatar">
-            <CategoryIcon />
+          <Avatar className="avatar ">
+            <CategoryIcon style={{ width: 15 }} />
           </Avatar>
         </Button>
       </Tooltip>
       <Tooltip title="Skillset" arrow>
         <Button onClick={handleOpenSkillsDialog}>
-          <Avatar className="avatar custom-avatar">
-            <SchoolIcon />
+          <Avatar className="avatar">
+            <SchoolIcon style={{ width: 15 }} />
           </Avatar>
         </Button>
       </Tooltip>
       <SkillsDialog open={dialogOpen} onClose={handleClose} />
       <Tooltip title="Download My Resume" arrow>
         <Button onClick={handleDownloadResume}>
-          <Avatar className="avatar custom-avatar">
-            <AssignmentIcon />
+          <Avatar className="avatar">
+            <AssignmentIcon style={{ width: 15 }} />
           </Avatar>
         </Button>
       </Tooltip>

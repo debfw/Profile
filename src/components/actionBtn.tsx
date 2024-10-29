@@ -8,7 +8,7 @@ export const ActionButton = ({
   label: string;
   onClick: () => void;
 }) => (
-  <Box className="avatar-container">
+  <Box className="avatar-container" style={{ marginTop: 10 }}>
     <Button onClick={onClick} className="snackbar-button">
       {label}
     </Button>
